@@ -7,12 +7,24 @@ document.querySelector(".nav").addEventListener("click", (event) => {
     }
 })
 
+// Адаптив бургер-меню
+const menuBtn = document.querySelector('.menu-btn')
+const menu = document.querySelector('.menu')
+document.querySelectorAll(".nav__links").forEach((value) => {
+    value.addEventListener("click", (event) => {
+        event.preventDefault()
+        menu.classList.remove("active")
+        menuBtn.classList.remove("active")
+        const id = event.target.getAttribute("href")
+        document.querySelector(id).scrollIntoView({behavior: "smooth"})
+    })
+})
+
+
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
 const mark = document.querySelector(".mark")
-const menuBtn = document.querySelector('.menu-btn')
-const menu = document.querySelector('.menu')
 const slideMobile = document.querySelector(".mobile")
 const slideDesktop = document.querySelector(".desktop")
 
