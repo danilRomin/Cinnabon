@@ -27,6 +27,10 @@ li {
   font-family: "Gotham Pro", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section:not(:first-child) {
   padding-top: 50px;
 }
@@ -115,6 +119,11 @@ a {
     font-size: 16px;
   }
 }
+.nav__links:hover {
+  color: #071d49;
+  transition: 0.3s ease;
+}
+
 .nav-icons {
   display: flex;
   margin-left: auto;
@@ -225,10 +234,6 @@ a {
 .menu-btn.active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-main {
-  overflow-x: hidden;
 }
 
 .banner-section {
