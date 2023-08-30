@@ -30,26 +30,34 @@ const slideDesktop = document.querySelector(".desktop")
 
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
-    const isMobileSmall = window.innerWidth <= 500
     const isMobile = window.innerWidth <= 980
     nav.classList.toggle("hide", isMobile)
     navIcons.classList.toggle("hide", isMobile)
     logoImg.classList.toggle("img-sm", isMobile)
     mark.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
-    slideMobile.classList.toggle("hide", isMobileSmall)
-    slideDesktop.classList.toggle("hide", !isMobileSmall)
+
     if (!isMobile) {
         menu.classList.remove("active")
         menuBtn.classList.remove("active")
     }
 }
 
+function slidesAdaptive() {
+    const isMobileSmall = window.innerWidth <= 500
+    slideMobile.classList.toggle("hide", !isMobileSmall)
+    slideDesktop.classList.toggle("hide", isMobileSmall)
+}
+
 // Вызов функции при загрузке страницы
 checkScreenWidth()
+slidesAdaptive()
 
 // Вызов функции при изменении ширины экрана
 window.addEventListener("resize", checkScreenWidth)
+window.addEventListener("resize", slidesAdaptive)
+
+
 
 // Появление бургер меню при клике на бургер-кнопку
 menuBtn.addEventListener("click", () => {
