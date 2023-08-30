@@ -2,14 +2,11 @@
 document.querySelector(".nav").addEventListener("click", (event) => {
     event.preventDefault()
     if (event.target.closest(".nav__links")) {
-        const nav__links = event.target
-        const gotoBlock = document.querySelector(nav__links.dataset.goto)
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
-        window.scrollTo({
-            top: gotoBlockValue, behavior: "smooth"
-        })
+        const id = event.target.getAttribute("href")
+        document.querySelector(id).scrollIntoView({behavior: "smooth"})
     }
 })
+
 // Адаптив бургер-меню
 const menuBtn = document.querySelector('.menu-btn')
 const menu = document.querySelector('.menu')

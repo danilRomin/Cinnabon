@@ -216,13 +216,14 @@ a {
 }
 
 main {
-  //overflow-y: scroll;
+  height: calc(100vh - 89px);
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
 .banner-section {
   background-image: url("../img/main1.jpg");
-  height: calc(100vh);
+  height: calc(100vh - 89px);
   background-size: cover;
   background-position: center;
   color: white;
