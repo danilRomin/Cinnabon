@@ -36,7 +36,7 @@ a {
   left: 0;
   background-color: white;
   z-index: 2;
-  //position: fixed;
+  position: fixed;
   width: 100%;
   box-shadow: 0 5px 18px -5px rgba(34, 60, 80, 0.2);
 }
@@ -47,7 +47,6 @@ a {
   height: 89px;
   gap: 4vw;
   justify-content: space-between;
-  margin-top: 10px;
 }
 
 .header.mobile {
@@ -216,14 +215,12 @@ a {
 }
 
 main {
-  height: calc(100vh - 89px);
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
 .banner-section {
   background-image: url("../img/main1.jpg");
-  height: calc(100vh - 89px);
+  height: calc(100vh);
   background-size: cover;
   background-position: center;
   color: white;
