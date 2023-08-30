@@ -101,10 +101,3 @@ function removeTextClasses() {
         item.classList.remove("active")
     })
 }
-function resize() {
-    const body = document.querySelector('body');
-    body.innerHTML = body.offsetHeight;
-
-    let perc = document.querySelector('.perc');
-    perc.innerHTML = perc.offsetHeight
-}
