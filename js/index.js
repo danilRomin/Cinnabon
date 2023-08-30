@@ -24,6 +24,10 @@ function checkScreenWidth() {
     logoImg.classList.toggle("img-sm", isMobile)
     mark.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
+    if (!isMobile) {
+        menu.classList.remove("active")
+        menuBtn.classList.remove("active")
+    }
 }
 
 // Вызов функции при загрузке страницы
@@ -41,16 +45,36 @@ menuBtn.addEventListener("click", () => {
 //Слайды с едой
 
 const slide = document.querySelectorAll(".menu-section__card")
+const slideText = document.querySelectorAll(".menu-section__text")
 
-for (let value of slide) {
+// Изменение класса при наведении
+slide.forEach((value) => {
     value.addEventListener("mouseover", () => {
         removeClasses()
         value.classList.add("card_active")
+        rem()
     })
-}
+})
+
 // Сброс активных слайдов
 function removeClasses() {
-    slide.forEach(function remove(item) {
+    slide.forEach(function (item) {
         item.classList.remove("card_active")
+    })
+}
+
+// Изменение классов у текста внутри карточек
+function rem() {
+    for (let value of slideText) {
+        if (value.closest(".card_active")) {
+            removeTextClasses()
+            value.classList.add("active")
+        }
+    }
+}
+
+function removeTextClasses() {
+    slideText.forEach(function (item) {
+        item.classList.remove("active")
     })
 }

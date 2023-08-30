@@ -114,6 +114,7 @@ a {
   position: relative;
   z-index: 2;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .menu-btn span {
@@ -135,16 +136,54 @@ a {
   top: calc(50% + 5px);
 }
 
+// Бургер список
+
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: white !important;
+  /* gap: 5vh; */
+  margin-top: 10vh;
+  text-align: center;
+  gap: 1vh;
+}
+
 .menu {
+  display: flex;
   position: fixed;
   top: 89px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(16, 29, 73);
   transform: translateX(-100%);
+  z-index: 3 !important;
   transition: transform 0.5s;
+  flex-direction: column;
+}
+
+.menu__nav .nav__links {
+  @media (max-width: 980px) {
+    width: 100%;
+    padding: 3vh;
+    transition: .3s ease;
+    &:hover {
+      background-color: #ffffff38;
+    }
+  }
+}
+
+.links-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
+  gap: 3vw;
+
+  svg {
+    max-width: 50px;
+  }
 }
 
 .menu.active {
@@ -186,15 +225,15 @@ main {
   background-size: cover;
   background-position: center;
   color: white;
+  position: relative;
 }
 
 .banner-text {
-  top: 80vh;
-  transform: translateY(-100%);
-  position: relative;
+  position: absolute;
   display: flex;
   gap: 20px;
   flex-direction: column;
+  bottom: 10vh;
 }
 
 sup {
@@ -261,12 +300,15 @@ sup {
 .menu__card-1 {
   background-image: url("../img/cinnabones/black.jpeg");
 }
+
 .menu__card-2 {
   background-image: url("../img/coffee/coffee1.jpg");
 }
+
 .menu__card-3 {
   background-image: url("../img/cheesecake/cheesecake1.jpg");
 }
+
 .menu__card-4 {
   background-image: url("../img/ice/ice1.jpg");
 }
@@ -276,6 +318,11 @@ sup {
   bottom: 10%;
   left: 5%;
   font-weight: bold;
+}
+
+.menu-section__text {
+  transition: .5s ease;
+  opacity: 0;
 }
 
 .offer {
