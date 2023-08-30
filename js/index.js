@@ -13,17 +13,20 @@ const logoImg = document.querySelector(".logo__img")
 const mark = document.querySelector(".mark")
 const menuBtn = document.querySelector('.menu-btn')
 const menu = document.querySelector('.menu')
-const header = document.querySelector(".header")
+const slideMobile = document.querySelector(".mobile")
+const slideDesktop = document.querySelector(".desktop")
 
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
+    const isMobileSmall = window.innerWidth <= 500
     const isMobile = window.innerWidth <= 980
-    header.classList.toggle("mobile", isMobile)
     nav.classList.toggle("hide", isMobile)
     navIcons.classList.toggle("hide", isMobile)
     logoImg.classList.toggle("img-sm", isMobile)
     mark.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
+    slideMobile.classList.toggle("hide", isMobileSmall)
+    slideDesktop.classList.toggle("hide", !isMobileSmall)
     if (!isMobile) {
         menu.classList.remove("active")
         menuBtn.classList.remove("active")
@@ -43,7 +46,6 @@ menuBtn.addEventListener("click", () => {
 })
 
 //Слайды с едой
-
 const slide = document.querySelectorAll(".menu-section__card")
 const slideText = document.querySelectorAll(".menu-section__text")
 
@@ -52,7 +54,7 @@ slide.forEach((value) => {
     value.addEventListener("mouseover", () => {
         removeClasses()
         value.classList.add("card_active")
-        rem()
+        toggleTextClasses()
     })
 })
 
@@ -63,8 +65,8 @@ function removeClasses() {
     })
 }
 
-// Изменение классов у текста внутри карточек
-function rem() {
+// Изменение классов у текста внутри слайдов
+function toggleTextClasses() {
     for (let value of slideText) {
         if (value.closest(".card_active")) {
             removeTextClasses()
@@ -73,6 +75,7 @@ function rem() {
     }
 }
 
+// Сброс активного текста у слайда
 function removeTextClasses() {
     slideText.forEach(function (item) {
         item.classList.remove("active")

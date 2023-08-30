@@ -46,6 +46,7 @@ a {
   align-items: center;
   height: 89px;
   gap: 4vw;
+  justify-content: space-between;
 }
 
 .header.mobile {
@@ -313,16 +314,24 @@ sup {
   background-image: url("../img/ice/ice1.jpg");
 }
 
+.menu-section__cards-wrapper.mobile {
+  margin-bottom: 50px!important;
+}
+
+.menu-section__cards-wrapper.mobile .menu-section__card {
+  height: 32vh!important;
+}
+
 .menu-section__text {
   position: absolute;
   bottom: 10%;
   left: 5%;
   font-weight: bold;
-}
-
-.menu-section__text {
   transition: .5s ease;
-  opacity: 0;
+  display: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .offer {
