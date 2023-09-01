@@ -24,6 +24,10 @@ li {
   opacity: 1 !important;
 }
 
+.body-overflow {
+  overflow: hidden !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,9 +38,6 @@ li {
 
 body {
   overflow-x: hidden;
-}
-body:has(.menu.active) {
-  overflow: hidden;
 }
 
 section:not(:first-child) {
@@ -65,7 +66,7 @@ a {
   left: 0;
   background-color: white;
   z-index: 2;
-  position: fixed;
+  position: sticky;
   width: 100%;
   box-shadow: 0 5px 18px -5px rgba(34, 60, 80, 0.2);
 }
@@ -176,7 +177,6 @@ a {
   align-items: center;
   text-transform: uppercase;
   color: white !important;
-  /* gap: 5vh; */
   margin-top: 10vh;
   text-align: center;
   gap: 1vh;
@@ -190,7 +190,7 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: rgb(16, 29, 73);
-  transform: translateX(-100%);
+  transform: translateX(100%);
   z-index: 3 !important;
   transition: transform 0.5s;
   flex-direction: column;
@@ -250,7 +250,7 @@ a {
 
 .banner-section {
   background-image: url("../img/main1.jpg");
-  height: 100vh;
+  height: calc(100vh - 89px);
   background-size: cover;
   background-position: center;
   color: white;
@@ -288,10 +288,6 @@ sup {
   line-height: 1.25;
 }
 
-.menu-section {
-  height: calc(100vh - 89px);
-}
-
 .menu__h1 {
   color: #071d49;
   font-size: 40px;
@@ -306,7 +302,6 @@ sup {
   display: flex;
   justify-content: center;
   color: white;
-  margin-bottom: 50px;
 }
 @media (max-width: 500px) {
   .menu-section__cards {
@@ -354,7 +349,7 @@ sup {
 
 .menu-section__text {
   position: absolute;
-  bottom: 10%;
+  bottom: 7%;
   left: 5%;
   font-weight: bold;
   transition: 0.5s ease;

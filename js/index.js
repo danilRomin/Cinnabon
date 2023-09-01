@@ -1,33 +1,43 @@
-// Скролл по нажатию на навбар
-const header = document.querySelector(".header-wrapper")
-document.querySelector(".nav").addEventListener("click", (event) => {
-    event.preventDefault()
-    if (event.target.closest(".nav__links")) {
-        const id = event.target.getAttribute("href")
-        document.querySelector(id).scrollIntoView({behavior: "smooth"})
-    }
-})
+const body = document.querySelector("body")
 
-// Клик по ссылке в бургере => скрытие бургера
+// Кроссбраузерное вычисление ширины скроллбара
+function getWidth() {
+    const docWidth = document.documentElement.clientWidth
+    return Math.abs(window.innerWidth - docWidth)
+}
+
+// Клик по бургер-кнопке (скрытие/показ скроллбара и показ/скрытие бургер-меню)
 const menuBtn = document.querySelector('.menu-btn')
 const menu = document.querySelector('.menu')
+menuBtn.addEventListener("click", (event) => {
+    menuBtn.classList.toggle("active");
+    menu.classList.toggle("active");
+    body.style.paddingRight = `${getWidth()}px`;
+    body.classList.toggle("body-overflow");
+})
+
+// Скролл по нажатию на навбар, скрытие бургер меню и показ скроллбара при клике на навбар-ссылку
 document.querySelectorAll(".nav__links").forEach((value) => {
     value.addEventListener("click", (event) => {
         event.preventDefault()
+        const nav__links = event.target
+        const gotoBlock = document.querySelector(nav__links.dataset.goto)
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
         menu.classList.remove("active")
         menuBtn.classList.remove("active")
-        const id = event.target.getAttribute("href")
-        document.querySelector(id).scrollIntoView({behavior: "smooth"})
+        body.classList.remove("body-overflow")
+        window.scrollTo({
+            top: gotoBlockValue, behavior: "smooth"
+        })
     })
 })
 
+// Адаптивное изменение шапки при изменении ширины экрана
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
 const mark = document.querySelector(".mark")
 
-
-// Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
     const isMobile = window.innerWidth <= 980
     nav.classList.toggle("hide", isMobile)
@@ -48,26 +58,11 @@ checkScreenWidth()
 // Вызов функции при изменении ширины экрана
 window.addEventListener("resize", checkScreenWidth)
 
-// Появление бургер меню при клике на бургер-кнопку
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    menu.classList.toggle("active");
-})
-
-function getWidth() {
-    const docWidth = document.documentElement.clientWidth
-    return Math.abs(window.innerWidth - docWidth)
-}
-
-getWidth()
-
-
-
-//Слайды с едой
+//Слайды (карточки) с едой
 const slide = document.querySelectorAll(".menu-section__card")
 const slideText = document.querySelectorAll(".menu-section__text")
 
-// Изменение класса при наведении
+// Изменение класса слайда (раскрытие) при наведении
 slide.forEach((value) => {
     value.addEventListener("mouseover", () => {
         removeClasses()
@@ -76,14 +71,14 @@ slide.forEach((value) => {
     })
 })
 
-// Сброс активных слайдов
+// Сброс активного слайда при наведении на другой
 function removeClasses() {
     slide.forEach(function (item) {
         item.classList.remove("card_active")
     })
 }
 
-// Изменение классов у текста внутри слайдов
+// Изменение классов у текста внутри слайдов (показ)
 function toggleTextClasses() {
     for (let value of slideText) {
         if (value.closest(".card_active")) {
@@ -93,7 +88,7 @@ function toggleTextClasses() {
     }
 }
 
-// Сброс активного текста у слайда
+// Сброс активного класса текста у слайда (скрытие)
 function removeTextClasses() {
     slideText.forEach(function (item) {
         item.classList.remove("active")
