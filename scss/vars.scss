@@ -19,9 +19,13 @@ li {
 
 .card_active {
   flex: 3 !important;
+
+  @media (max-width: 500px) {
+    flex: none!important;
+  }
 }
 
 .active {
-  display: block!important;
+  opacity: 1!important;
 }
 

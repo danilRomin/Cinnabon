@@ -1,4 +1,5 @@
 // Скролл по нажатию на навбар
+const header = document.querySelector(".header-wrapper")
 document.querySelector(".nav").addEventListener("click", (event) => {
     event.preventDefault()
     if (event.target.closest(".nav__links")) {
@@ -7,7 +8,7 @@ document.querySelector(".nav").addEventListener("click", (event) => {
     }
 })
 
-// Адаптив бургер-меню
+// Клик по ссылке в бургере => скрытие бургера
 const menuBtn = document.querySelector('.menu-btn')
 const menu = document.querySelector('.menu')
 document.querySelectorAll(".nav__links").forEach((value) => {
@@ -20,13 +21,11 @@ document.querySelectorAll(".nav__links").forEach((value) => {
     })
 })
 
-
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
 const mark = document.querySelector(".mark")
-const slideMobile = document.querySelector(".mobile")
-const slideDesktop = document.querySelector(".desktop")
+
 
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
@@ -43,27 +42,26 @@ function checkScreenWidth() {
     }
 }
 
-function slidesAdaptive() {
-    const isMobileSmall = window.innerWidth <= 500
-    slideMobile.classList.toggle("hide", !isMobileSmall)
-    slideDesktop.classList.toggle("hide", isMobileSmall)
-}
-
 // Вызов функции при загрузке страницы
 checkScreenWidth()
-slidesAdaptive()
 
 // Вызов функции при изменении ширины экрана
 window.addEventListener("resize", checkScreenWidth)
-window.addEventListener("resize", slidesAdaptive)
-
-
 
 // Появление бургер меню при клике на бургер-кнопку
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
     menu.classList.toggle("active");
 })
+
+function getWidth() {
+    const docWidth = document.documentElement.clientWidth
+    return Math.abs(window.innerWidth - docWidth)
+}
+
+getWidth()
+
+
 
 //Слайды с едой
 const slide = document.querySelectorAll(".menu-section__card")

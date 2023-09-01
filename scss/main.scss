@@ -12,6 +12,10 @@
 
 body {
   overflow-x: hidden;
+
+  &:has(.menu.active) {
+    overflow: hidden;
+  }
 }
 
 section:not(:first-child) {
@@ -174,6 +178,10 @@ a {
   flex-direction: column;
 }
 
+.menu.active + body {
+  overflow: hidden !important;
+}
+
 .menu__nav .nav__links {
   @media (max-width: 980px) {
     width: 100%;
@@ -198,7 +206,7 @@ a {
 
 .menu.active {
   transform: translateX(0px);
-  z-index: 3;
+  z-index: 3 !important;
 }
 
 .menu li {
@@ -285,7 +293,13 @@ sup {
   display: flex;
   justify-content: center;
   color: white;
+  margin-bottom: 50px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 }
+
 
 .menu-section__card {
   display: flex;
@@ -300,7 +314,14 @@ sup {
   background-position: center;
   background-repeat: no-repeat;
   transition: .5s all ease;
+
+  @media (max-width: 500px) {
+    flex: none;
+    margin: 30px 0 0 0;
+    height: 30vh;
+  }
 }
+
 
 .menu__card-1 {
   background-image: url("../img/cinnabones/black.jpeg");
@@ -318,21 +339,18 @@ sup {
   background-image: url("../img/ice/ice1.jpg");
 }
 
-.menu-section__cards-wrapper.mobile {
-  margin-bottom: 50px!important;
-}
-
-.menu-section__cards-wrapper.mobile .menu-section__card {
-  height: 32vh!important;
-}
-
 .menu-section__text {
   position: absolute;
   bottom: 10%;
   left: 5%;
   font-weight: bold;
   transition: .5s ease;
-  display: none;
+  opacity: 0;
+
+  @media (max-width: 500px) {
+    opacity: 1 !important;
+  }
+
   &:hover {
     text-decoration: underline;
   }

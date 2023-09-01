@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/citylink.iml" filepath="$PROJECT_DIR$/.idea/citylink.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../www/landingPage/.idea/landingPage.iml" filepath="$PROJECT_DIR$/../../www/landingPage/.idea/landingPage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../www/photocards/.idea/photocards.iml" filepath="$PROJECT_DIR$/../../www/photocards/.idea/photocards.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Материалы JS с нуля/ПРАКТИКА/10-Используем классы/start/.idea/start.iml" filepath="$PROJECT_DIR$/../../Материалы JS с нуля/ПРАКТИКА/10-Используем классы/start/.idea/start.iml" />
     </modules>
   </component>
 </project>
