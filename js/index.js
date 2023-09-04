@@ -1,22 +1,9 @@
 const body = document.querySelector("body")
-
-// Кроссбраузерное вычисление ширины скроллбара
 function getWidth() {
     const docWidth = document.documentElement.clientWidth
     return Math.abs(window.innerWidth - docWidth)
 }
-
-// Клик по бургер-кнопке (скрытие/показ скроллбара и показ/скрытие бургер-меню)
-const menuBtn = document.querySelector('.menu-btn')
-const menu = document.querySelector('.menu')
-menuBtn.addEventListener("click", (event) => {
-    menuBtn.classList.toggle("active");
-    menu.classList.toggle("active");
-    body.style.paddingRight = `${getWidth()}px`;
-    body.classList.toggle("body-overflow");
-})
-
-// Скролл по нажатию на навбар, скрытие бургер меню и показ скроллбара при клике на навбар-ссылку
+// Скролл по нажатию на ссылки
 document.querySelectorAll(".nav__links").forEach((value) => {
     value.addEventListener("click", (event) => {
         event.preventDefault()
@@ -26,18 +13,21 @@ document.querySelectorAll(".nav__links").forEach((value) => {
         menu.classList.remove("active")
         menuBtn.classList.remove("active")
         body.classList.remove("body-overflow")
+        body.style.paddingRight = ""
         window.scrollTo({
             top: gotoBlockValue, behavior: "smooth"
         })
     })
 })
 
-// Адаптивное изменение шапки при изменении ширины экрана
+const menuBtn = document.querySelector('.menu-btn')
+const menu = document.querySelector('.menu')
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
 const mark = document.querySelector(".mark")
 
+// Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
     const isMobile = window.innerWidth <= 980
     nav.classList.toggle("hide", isMobile)
@@ -49,6 +39,8 @@ function checkScreenWidth() {
     if (!isMobile) {
         menu.classList.remove("active")
         menuBtn.classList.remove("active")
+        body.classList.remove("body-overflow")
+        body.style.paddingRight = ""
     }
 }
 
@@ -58,11 +50,19 @@ checkScreenWidth()
 // Вызов функции при изменении ширины экрана
 window.addEventListener("resize", checkScreenWidth)
 
-//Слайды (карточки) с едой
+// Клик по бургеру
+menuBtn.addEventListener("click", (event) => {
+    menuBtn.classList.toggle("active");
+    menu.classList.toggle("active");
+    body.style.paddingRight = `${getWidth()}px`;
+    body.classList.toggle("body-overflow");
+})
+
+//Слайды с едой
 const slide = document.querySelectorAll(".menu-section__card")
 const slideText = document.querySelectorAll(".menu-section__text")
 
-// Изменение класса слайда (раскрытие) при наведении
+// Изменение класса слайдов при наведении
 slide.forEach((value) => {
     value.addEventListener("mouseover", () => {
         removeClasses()
@@ -71,14 +71,14 @@ slide.forEach((value) => {
     })
 })
 
-// Сброс активного слайда при наведении на другой
+// Сброс активных слайдов
 function removeClasses() {
     slide.forEach(function (item) {
         item.classList.remove("card_active")
     })
 }
 
-// Изменение классов у текста внутри слайдов (показ)
+// Изменение классов у текста внутри слайдов
 function toggleTextClasses() {
     for (let value of slideText) {
         if (value.closest(".card_active")) {
@@ -88,7 +88,7 @@ function toggleTextClasses() {
     }
 }
 
-// Сброс активного класса текста у слайда (скрытие)
+// Сброс активного текста у слайда
 function removeTextClasses() {
     slideText.forEach(function (item) {
         item.classList.remove("active")

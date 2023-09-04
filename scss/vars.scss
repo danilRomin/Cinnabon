@@ -2,19 +2,12 @@
   display: none !important;
 }
 
-//.mobile {
-//  display: flex;
-//  justify-content: center;
-//}
-
 li {
   list-style-type: none;
 }
 
 .img-sm {
   max-width: 160px !important;
-  //@media (min-width: 320px) and (max-width: 980px) {
-  //  max-width: calc(160px + (200 - 160) * ((100vw - 320px) / (980 - 320)));
 }
 
 .card_active {
