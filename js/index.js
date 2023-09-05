@@ -1,11 +1,13 @@
 const body = document.querySelector("body")
+
 function getWidth() {
     const docWidth = document.documentElement.clientWidth
     return Math.abs(window.innerWidth - docWidth)
 }
+
 // Скролл по нажатию на ссылки
-document.querySelectorAll(".nav__links").forEach((value) => {
-    value.addEventListener("click", (event) => {
+document.querySelectorAll(".nav__links").forEach((item) => {
+    item.addEventListener("click", (event) => {
         event.preventDefault()
         const nav__links = event.target
         const gotoBlock = document.querySelector(nav__links.dataset.goto)
@@ -63,10 +65,10 @@ const slide = document.querySelectorAll(".menu-section__card")
 const slideText = document.querySelectorAll(".menu-section__text")
 
 // Изменение класса слайдов при наведении
-slide.forEach((value) => {
-    value.addEventListener("mouseover", () => {
+slide.forEach((item) => {
+    item.addEventListener("mouseover", () => {
         removeClasses()
-        value.classList.add("card_active")
+        item.classList.add("card_active")
         toggleTextClasses()
     })
 })
@@ -94,3 +96,22 @@ function removeTextClasses() {
         item.classList.remove("active")
     })
 }
+
+// Табы
+
+function tab() {
+    let tabNav = document.querySelectorAll(".tabs__tab-btn")
+    let tabContent = document.querySelectorAll(".tabs__item")
+    tabNav.forEach(item => {
+        item.addEventListener("click", function (event) {
+            tabNav.forEach(function (item) {
+                item.classList.remove("active")
+                event.target.classList.add("active")
+            })
+        })
+    })
+
+
+}
+
+tab()

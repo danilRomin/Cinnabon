@@ -405,4 +405,32 @@ sup {
   background-image: url("../img/cinnabones/cin4.jpg");
 }
 
+.tabs__head {
+  display: flex;
+  gap: 2vw;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.tabs__head .tabs__tab-btn {
+  border: none;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  padding: 10px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.tabs__head .tabs__tab-btn.active {
+  background-color: #071d49;
+  color: white;
+}
+
+.tabs__content .tabs__item {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.tabs__content .tabs__item.active {
+  display: flex;
+}
+
 /*# sourceMappingURL=main.css.map */
