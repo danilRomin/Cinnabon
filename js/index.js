@@ -98,20 +98,27 @@ function removeTextClasses() {
 }
 
 // Табы
+let tabHead = document.querySelector(".tabs__head")
+let tabNav = document.querySelectorAll(".tabs__tab-btn")
+let tabContent = document.querySelectorAll(".tabs__item")
+tabHead.addEventListener("click", function (event) {
+    // Проверка клика по кнопке
+    const clicked = event.target.closest(".tabs__tab-btn")
+    if (!clicked) return
 
-function tab() {
-    let tabNav = document.querySelectorAll(".tabs__tab-btn")
-    let tabContent = document.querySelectorAll(".tabs__item")
-    tabNav.forEach(item => {
-        item.addEventListener("click", function (event) {
-            tabNav.forEach(function (item) {
-                item.classList.remove("active")
-                event.target.classList.add("active")
-            })
-        })
+    // Убрать активность всех кнопок
+    tabNav.forEach((item) => {
+        item.classList.remove("active")
     })
 
+    // Сделать кнопку активной при клике на неё
+    event.target.classList.add("active")
+    let tabName = event.target.dataset.tab
+    console.log(tabName)
 
-}
-
-tab()
+    tabContent.forEach(function (item) {
+        if (item.classList.contains(tabName)) {
+            item.classList.add("active")
+        } else item.classList.remove("active")
+    })
+})
