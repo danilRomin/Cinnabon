@@ -110,11 +110,12 @@ function changeTabs() {
     if (isMobile) {
         tabNav.forEach((item) => {
             item.classList.remove("tabs-order")
-            item.classList.add("tabs-order")
+            activeTab.classList.add("tabs-order")
         })
-    } else {
-        activeTab.classList.remove("tabs-order")
     }
+    // else {
+    //     activeTab.classList.remove("tabs-order")
+    // }
 }
 
 changeTabs()
