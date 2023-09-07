@@ -103,19 +103,16 @@ let tabNav = document.querySelectorAll(".tabs__tab-btn")
 let tabContent = document.querySelectorAll(".tabs__item")
 
 // Активный таб
-let activeTab = document.querySelector(".tabs__tab-btn.active-tab")
 
 function changeTabs() {
     const isMobile = window.innerWidth <= 580
     if (isMobile) {
         tabNav.forEach((item) => {
+            let activeTab = document.querySelector(".tabs__tab-btn.active-tab")
             item.classList.remove("tabs-order")
             activeTab.classList.add("tabs-order")
         })
     }
-    // else {
-    //     activeTab.classList.remove("tabs-order")
-    // }
 }
 
 changeTabs()
