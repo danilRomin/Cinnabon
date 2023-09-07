@@ -101,24 +101,53 @@ function removeTextClasses() {
 let tabHead = document.querySelector(".tabs__head")
 let tabNav = document.querySelectorAll(".tabs__tab-btn")
 let tabContent = document.querySelectorAll(".tabs__item")
-tabHead.addEventListener("click", function (event) {
+
+// Активный таб
+let activeTab = document.querySelector(".tabs__tab-btn.active-tab")
+
+function changeTabs() {
+    const isMobile = window.innerWidth <= 580
+    if (isMobile) {
+        tabNav.forEach((item) => {
+            item.classList.remove("tabs-order")
+        })
+    } else {
+        activeTab.classList.remove("tabs-order")
+    }
+}
+
+changeTabs()
+
+window.addEventListener("resize", changeTabs)
+
+tabHead.addEventListener("click", (event) => {
     // Проверка клика по кнопке
     const clicked = event.target.closest(".tabs__tab-btn")
+    const isMobile = window.innerWidth <= 580
     if (!clicked) return
 
     // Убрать активность всех кнопок
     tabNav.forEach((item) => {
-        item.classList.remove("active")
+        item.classList.remove("active-tab")
+        if (isMobile) {
+            item.classList.remove("tabs-order")
+        }
     })
 
     // Сделать кнопку активной при клике на неё
-    event.target.classList.add("active")
-    let tabName = event.target.dataset.tab
-    console.log(tabName)
+    event.target.classList.add("active-tab")
+    if (isMobile) {
+        event.target.classList.add("tabs-order")
 
-    tabContent.forEach(function (item) {
+    }
+    let tabName = event.target.dataset.tab
+
+    // Дата атрибут = класс контента
+    tabContent.forEach((item) => {
         if (item.classList.contains(tabName)) {
-            item.classList.add("active")
-        } else item.classList.remove("active")
+            item.classList.add("active-tab")
+        } else item.classList.remove("active-tab")
     })
 })
+
+

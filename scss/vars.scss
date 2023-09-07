@@ -14,14 +14,23 @@ li {
   flex: 3 !important;
 
   @media (max-width: 500px) {
-    flex: none!important;
+    flex: none !important;
   }
 }
 
 .active {
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
 .body-overflow {
-  overflow: hidden!important;
+  overflow: hidden !important;
+}
+
+$mobile: 500px;
+
+$mobile-m: 580px;
+
+.tabs-order {
+  order: 3;
+  transition: 3s;
 }

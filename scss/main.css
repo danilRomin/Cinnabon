@@ -28,6 +28,11 @@ li {
   overflow: hidden !important;
 }
 
+.tabs-order {
+  order: 3;
+  transition: 3s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +60,7 @@ a {
   padding: 0 30px;
 }
 
-.container__menu-section {
+.container-sm {
   max-width: 1085px;
   margin: 0 auto;
   padding: 0 30px;
@@ -106,7 +111,6 @@ a {
   transform: translateX(-50%);
   transition: all 0.35s linear;
   bottom: calc(-10px - 0.4rem);
-  z-index: 6;
 }
 @media (min-width: 320px) and (max-width: 980px) {
   .logo::after {
@@ -191,7 +195,7 @@ a {
   height: 100vh;
   background-color: rgb(16, 29, 73);
   transform: translateX(100%);
-  z-index: 3 !important;
+  z-index: 5 !important;
   transition: transform 0.5s;
   flex-direction: column;
 }
@@ -303,7 +307,7 @@ sup {
   justify-content: center;
   color: white;
 }
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .menu-section__cards {
     flex-direction: column;
   }
@@ -323,7 +327,7 @@ sup {
   background-repeat: no-repeat;
   transition: 0.5s all ease;
 }
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .menu-section__card {
     flex: none;
     margin: 30px 0 0 0;
@@ -355,13 +359,10 @@ sup {
   transition: 0.5s ease;
   opacity: 0;
 }
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .menu-section__text {
     opacity: 1 !important;
   }
-}
-.menu-section__text:hover {
-  text-decoration: underline;
 }
 
 .offer {
@@ -389,25 +390,12 @@ sup {
   height: 100%;
 }
 
-.con1 {
-  background-image: url("../img/cinnabones/cin1.jpg");
-}
-
-.con2 {
-  background-image: url("../img/cinnabones/cin2.jpg");
-}
-
-.con4 {
-  background-image: url("../img/cinnabones/cin3.jpg");
-}
-
-.con3 {
-  background-image: url("../img/cinnabones/cin4.jpg");
+.tabs {
+  margin-top: 50px;
 }
 
 .tabs__head {
   display: flex;
-  padding-top: 20px;
   flex-wrap: wrap;
 }
 .tabs__head .tabs__tab-btn {
@@ -416,19 +404,107 @@ sup {
   background-color: transparent;
   padding: 10px 40px;
   cursor: pointer;
+  transition: 0.3s ease;
+  flex: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 1;
 }
-.tabs__head .tabs__tab-btn.active {
-  background-color: #071d49;
+.tabs__head .tabs__tab-btn:after {
+  content: "";
+  display: block;
+  height: 9px;
+  width: 45px;
+  background: url(../img/tip2.png) transparent center center no-repeat;
+  left: 50%;
+  position: absolute;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  transition: all 0.35s linear;
+  bottom: calc(-1px - 0.4rem);
+}
+@media (min-width: 580px) {
+  .tabs__head .tabs__tab-btn {
+    transform: translateY(5px);
+  }
+}
+.tabs__head .tabs__tab-btn:hover {
+  background-color: rgba(7, 29, 73, 0.6196078431);
   color: white;
 }
-
-.tabs__content .tabs__item {
-  display: none;
-  background-color: #f2f2f2;
-  padding: 20px;
+.tabs__head .tabs__tab-btn.active-tab {
+  background-color: #071d49;
+  color: white;
+  font-size: 14px;
+  transform: translateY(0px);
+  z-index: 2;
 }
-.tabs__content .tabs__item.active {
+
+.tabs__content {
+  position: relative;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+.tabs__content p {
+  font-weight: normal;
+}
+
+.tabs__item {
+  display: none;
+  transform: translateY(-10%);
+  padding: 25px;
+  animation: showContent 0.6s forwards;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.tabs__item.active-tab {
   display: flex;
+  opacity: 0;
+  column-gap: 3vw;
+}
+@media (max-width: 500px) {
+  .tabs__item.active-tab {
+    display: flex;
+    opacity: 0;
+    column-gap: 3vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+  }
+}
+
+.tabs__icon {
+  width: 50%;
+  height: 50%;
+}
+
+.tabs__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  min-width: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  background-color: pink;
+}
+
+@keyframes showContent {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

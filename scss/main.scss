@@ -29,7 +29,7 @@ a {
   padding: 0 30px;
 }
 
-.container__menu-section {
+.container-sm {
   max-width: 1085px;
   margin: 0 auto;
   padding: 0 30px;
@@ -80,7 +80,6 @@ a {
   transform: translateX(-50%);
   transition: all 0.35s linear;
   bottom: calc(-10px - 0.4rem);
-  z-index: 6;
   @media (min-width: 320px) and (max-width: 980px) {
     bottom: calc(-10px - 0.8rem) !important;
   }
@@ -168,7 +167,7 @@ a {
   height: 100vh;
   background-color: rgb(16, 29, 73);
   transform: translateX(100%);
-  z-index: 3 !important;
+  z-index: 5 !important;
   transition: transform 0.5s;
   flex-direction: column;
 }
@@ -285,7 +284,7 @@ sup {
   justify-content: center;
   color: white;
 
-  @media (max-width: 500px) {
+  @media (max-width: $mobile-m) {
     flex-direction: column;
   }
 }
@@ -305,7 +304,7 @@ sup {
   background-repeat: no-repeat;
   transition: .5s all ease;
 
-  @media (max-width: 500px) {
+  @media (max-width: $mobile-m) {
     flex: none;
     margin: 30px 0 0 0;
     height: 30vh;
@@ -337,12 +336,8 @@ sup {
   transition: .5s ease;
   opacity: 0;
 
-  @media (max-width: 500px) {
+  @media (max-width: $mobile-m) {
     opacity: 1 !important;
-  }
-
-  &:hover {
-    text-decoration: underline;
   }
 }
 
@@ -371,27 +366,12 @@ sup {
   height: 100%;
 }
 
-.con1 {
-  background-image: url("../img/cinnabones/cin1.jpg");
+.tabs {
+  margin-top: 50px;
 }
-
-.con2 {
-  background-image: url("../img/cinnabones/cin2.jpg");
-}
-
-.con4 {
-  background-image: url("../img/cinnabones/cin3.jpg");
-}
-
-.con3 {
-  background-image: url("../img/cinnabones/cin4.jpg");
-}
-
-// 3 блок
 
 .tabs__head {
   display: flex;
-  padding-top: 20px;
   flex-wrap: wrap;
 
   .tabs__tab-btn {
@@ -400,23 +380,113 @@ sup {
     background-color: transparent;
     padding: 10px 40px;
     cursor: pointer;
+    transition: .3s ease;
+    flex: 1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1;
 
-    &.active {
+    &:after {
+      content: "";
+      display: block;
+      height: 9px;
+      width: 45px;
+      background: url(../img/tip2.png) transparent center center no-repeat;
+      left: 50%;
+      position: absolute;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      transition: all 0.35s linear;
+      bottom: calc(-1px - 0.4rem);
+
+    }
+
+    @media (min-width: $mobile-m) {
+      transform: translateY(5px);
+    }
+
+    &:hover {
+      background-color: $btn-hover;
+      color: white;
+    }
+
+    &.active-tab {
       background-color: $main-blue;
       color: white;
+      font-size: 14px;
+      transform: translateY(0px);
+      z-index: 2;
     }
   }
 }
 
 .tabs__content {
+  position: relative;
+  background-color: $background-gray;
+  overflow: hidden;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-bottom: 50px;
+  z-index: 1;
 
-  .tabs__item {
-    display: none;
-    background-color: #f2f2f2;
-    padding: 20px;
+  p {
+    font-weight: normal;
+  }
+}
 
-    &.active {
+.tabs__item {
+  display: none;
+  transform: translateY(-10%);
+  padding: 25px;
+  animation: showContent 0.6s forwards;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+
+
+  &.active-tab {
+    display: flex;
+    opacity: 0;
+    column-gap: 3vw;
+
+
+    @media (max-width: $mobile) {
       display: flex;
+      opacity: 0;
+      column-gap: 3vw;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      text-align: center;
     }
   }
 }
+
+.tabs__icon {
+  width: 50%;
+  height: 50%;
+}
+
+.tabs__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  min-width: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  background-color: pink;
+}
+
+@keyframes showContent {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
