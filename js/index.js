@@ -120,6 +120,7 @@ changeTabs()
 window.addEventListener("resize", changeTabs)
 
 tabHead.addEventListener("click", (event) => {
+
     // Проверка клика по кнопке
     const clicked = event.target.closest(".tabs__tab-btn")
     const isMobile = window.innerWidth <= 580
@@ -149,4 +150,10 @@ tabHead.addEventListener("click", (event) => {
     })
 })
 
+let rest = 1
 
+document.querySelectorAll(".address__card-img").forEach((item) => {
+    item.style.cssText = `
+      background-image:url('img/rests/rest${rest}.jpeg')`
+    rest++
+})
