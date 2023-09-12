@@ -23,7 +23,7 @@ document.querySelectorAll(".nav__links").forEach((item) => {
 })
 
 const menuBtn = document.querySelector('.menu-btn')
-const menu = document.querySelector('.menu')
+const menu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
@@ -150,6 +150,7 @@ tabHead.addEventListener("click", (event) => {
     })
 })
 
+// Картинка на фоне у карточек ресторана
 let rest = 1
 
 document.querySelectorAll(".address__card-img").forEach((item) => {
@@ -157,3 +158,4 @@ document.querySelectorAll(".address__card-img").forEach((item) => {
       background-image:url('img/rests/rest${rest}.jpeg')`
     rest++
 })
+
