@@ -172,8 +172,7 @@ toCartBtn.forEach((item) => {
     })
 })
 
-
-
+// Скролл при нажатии на слайды с едой
 document.querySelectorAll(".menu-section__card").forEach((item) => {
     item.addEventListener("click", (event) => {
         event.preventDefault()
