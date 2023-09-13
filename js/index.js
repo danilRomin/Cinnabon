@@ -9,8 +9,8 @@ function getWidth() {
 document.querySelectorAll(".nav__links").forEach((item) => {
     item.addEventListener("click", (event) => {
         event.preventDefault()
-        const nav__links = event.target
-        const gotoBlock = document.querySelector(nav__links.dataset.goto)
+        const navLinks = event.target
+        const gotoBlock = document.querySelector(navLinks.dataset.goto)
         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
         menu.classList.remove("active")
         menuBtn.classList.remove("active")
@@ -159,3 +159,29 @@ document.querySelectorAll(".address__card-img").forEach((item) => {
     rest++
 })
 
+// Уведомление при клике на кнопку "в корзину"
+const toCartBtn = document.querySelectorAll(".food-card__btn")
+const toCardNotification = document.querySelector(".cart-notification")
+
+toCartBtn.forEach((item) => {
+    item.addEventListener("click", () => {
+        toCardNotification.classList.remove("opacity")
+        setTimeout(function () {
+            toCardNotification.classList.add("opacity")
+        },1500)
+    })
+})
+
+
+
+document.querySelectorAll(".menu-section__card").forEach((item) => {
+    item.addEventListener("click", (event) => {
+        event.preventDefault()
+        const sectionCard = event.target
+        const gotoBlock = document.querySelector(sectionCard.dataset.goto)
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
+        window.scrollTo({
+            top: gotoBlockValue, behavior: "smooth"
+        })
+    })
+})

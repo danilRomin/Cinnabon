@@ -28,7 +28,7 @@
                 <a class="nav__links link-1" data-goto=".page__section_1" href="#section-1">Главная</a>
                 <a class="nav__links link-2" data-goto=".page__section_2" href="#section-2">Меню</a>
                 <a class="nav__links link-3" data-goto=".page__section_3" href="#section-3">Почему мы</a>
-                <a class="nav__links link-4" href="#section-4">Адреса и доставка</a>
+                <a class="nav__links link-4" data-goto=".page__section_4" href="#section-4">Адреса и доставка</a>
                 <a class="nav__links link-5" href="#section-5">Контакты</a>
             </div>
             <div class="nav-icons">
@@ -62,7 +62,8 @@
             <div class="burger-menu">
                 <div class="menu__nav">
                     <a class="nav__links link-1" data-goto=".page__section_1" href="#section-1">Главная</a>
-                    <a class="nav__links link-2" data-goto=".page__section_2" href="#section-2">Меню</a>
+                    <a class="nav__links link-2" data-goto=".page__section_2" href="#section-2">Меню
+                    </a>
                     <a class="nav__links link-3" data-goto=".page__section_3" href="#section-3">Почему мы</a>
                     <a class="nav__links link-4" data-goto=".page__section_4" href="#section-4">Адреса и доставка</a>
                     <a class="nav__links link-5" data-goto=".page__section5" href="#section-5">Контакты</a>
@@ -135,18 +136,17 @@
             <h1 class="h1">Меню Cinnabon® Bakery</h1>
             <div class="menu-section__cards-wrapper desktop">
                 <div class="menu-section__cards">
-                    <!--                    <a href="#">-->
-                    <a href="#" class="menu-section__card menu__card-1 card_active">
+                    <a href="#section-cinnabon" data-goto=".menu__section_1"
+                       class="menu-section__card menu__card-1 card_active">
                         <p class="menu-section__text active">Синнабон</p>
                     </a>
-                    <!--                    </a>-->
-                    <a href="#" class="menu-section__card menu__card-2">
+                    <a href="#section-coffee" data-goto=".menu__section_2" class="menu-section__card menu__card-2">
                         <p class="menu-section__text">Холодный кофе</p>
                     </a>
-                    <a href="#" class="menu-section__card menu__card-3">
+                    <a href="#section-cheese" data-goto=".menu__section_3" class="menu-section__card menu__card-3">
                         <p class="menu-section__text">Чизкейк</p>
                     </a>
-                    <a href="#" class="menu-section__card menu__card-4">
+                    <a href="#section-ice" data-goto=".menu__section_4" class="menu-section__card menu__card-4">
                         <p class="menu-section__text">Мороженое</p>
                     </a>
                 </div>
@@ -156,438 +156,485 @@
 
     <section class="menu">
         <div class="container-sm">
-            <h1 class="h1">Синнабоны</h1>
-            <div class="menu-grid">
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/classic.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Классический синнабон</p>
-                            <p class="food-card__weight">250 гр.</p>
+            <section class="food-section menu__section_1" id="section-cinnabon">
+                <h1 class="h1">Синнабоны</h1>
+                <div class="menu-grid">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/classic.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/peka.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Пеканбон</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Классический синнабон</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/cinnabones/cin3.jpg" alt="">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/peka.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Пеканбон</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Шокобон</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/cinnabones/cin3.jpg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h1 class="h1">Холодный кофе</h1>
-            <div class="menu-grid">
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/frapp.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Фраппе</p>
-                            <p class="food-card__weight">250 мл.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Шокобон</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/frappu.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Фраппучино</p>
-                            <p class="food-card__weight">250 гр.</p>
+            </section>
+            <section class="food-section menu__section_2" id="section-coffee">
+                <h1 class="h1">Холодный кофе</h1>
+                <div class="menu-grid">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/frapp.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/raf.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Раф</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Фраппе</p>
+                                <p class="food-card__weight">250 мл.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/cold.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Холодный капучино</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/frappu.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/oleng.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Ольенг</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Фраппучино</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/smooth.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Кофейный смузи</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/raf.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h1 class="h1">Чизкейки</h1>
-            <div class="menu-grid">
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/fila.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Филадельфия</p>
-                            <p class="food-card__weight">250 мл.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Раф</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/rik.jpeg" alt="">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/cold.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Холодный капучино</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">С рикоттой</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/oleng.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Ольенг</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/smooth.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Кофейный смузи</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/japan.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Японский хлопковый</p>
-                            <p class="food-card__weight">250 гр.</p>
+            </section>
+            <section class="food-section menu__section_3" id="section-cheese">
+                <h1 class="h1">Чизкейки</h1>
+                <div class="menu-grid">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/fila.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/chika.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">В чикагском стиле</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Филадельфия</p>
+                                <p class="food-card__weight">250 мл.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/bakedCheez.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Запеченный</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/rik.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/sweden.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Шведский</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">С рикоттой</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <h1 class="h1">Мороженое</h1>
-            <div class="menu-grid">
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/vanille.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Ванильное</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/japan.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/chokoIce.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Шоколадное</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Японский хлопковый</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/coffeIce.jpeg" alt="">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/chika.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">В чикагском стиле</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Шокобон</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/bakedCheez.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Запеченный</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/sweden.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Шведский</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/cherry.jpeg" alt="">
+            </section>
+            <section class="food-section menu__section_4" id="section-ice">
+                <h1 class="h1">Мороженое</h1>
+                <div class="menu-grid">
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/vanille.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Ванильное</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Вишневое</p>
-                            <p class="food-card__weight">250 гр.</p>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/chokoIce.jpeg" alt="">
                         </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Шоколадное</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/coffeIce.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Кофейное</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/cherry.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Вишневое</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/nut.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Ореховое</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-card__img">
+                            <img src="img/foodcard/brulle.jpeg" alt="">
+                        </div>
+                        <div class="food-card__content">
+                            <div class="food-card__title">
+                                <p class="food-card__name">Крем-брюле</p>
+                                <p class="food-card__weight">250 гр.</p>
+                            </div>
+                            <div class="food-card__info">
+                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
+                                Макара
+                                высшего ка...
+                            </div>
+                            <div class="food-card__offer">
+                                <p class="food-card__cost">325 ₽</p>
+                                <button class="food-card__btn">
+                                    В корзину
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/nut.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Ореховое</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card__img">
-                        <img src="img/foodcard/brulle.jpeg" alt="">
-                    </div>
-                    <div class="food-card__content">
-                        <div class="food-card__title">
-                            <p class="food-card__name">Крем-брюле</p>
-                            <p class="food-card__weight">250 гр.</p>
-                        </div>
-                        <div class="food-card__info">
-                            Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица Макара высшего ка...
-                        </div>
-                        <div class="food-card__offer">
-                            <p class="food-card__cost">325 ₽</p>
-                            <button class="food-card__btn">
-                                В корзину
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     </section>
     <section class="tabs-section page__section_3" id="section-3">
@@ -652,8 +699,8 @@
             </div>
         </div>
     </section>
-
-    <section class="address">
+<!---->
+    <section class="address page__section_4" id="section-4">
         <div class="container-sm">
             <h1 class="h1">Адреса и доставка</h1>
             <h1 class="h1 h1_gap">Томск</h1>
@@ -737,8 +784,14 @@
             </div>
         </div>
     </section>
-
 </main>
+
+<!--alert (Успешно добавлено)-->
+<div class="cart-notification opacity">
+    Успешно добавлено!
+</div>
+
+
 <script src="js/index.js"></script>
 </body>
 </html>

@@ -9,11 +9,15 @@
   font-family: "Gotham Pro", sans-serif;
 }
 
+.arrow-down {
+  transform: translateY(20%);
+}
+
 body {
   overflow-x: hidden;
 }
 
-section:not(:first-child) {
+section:not(:first-child, .food-section) {
   padding-top: 50px;
 }
 
@@ -535,12 +539,10 @@ sup {
   font-size: 18px;
   line-height: 1.4;
 
-
   &.active-tab {
     display: flex;
     opacity: 0;
     column-gap: 3vw;
-
 
     @media (max-width: $mobile) {
       display: flex;
@@ -649,6 +651,36 @@ sup {
     display: flex;
     flex-direction: column;
     gap: 5px;
+  }
+}
+
+//alert (Успешно добавлено)
+.cart-notification {
+  padding: 10px 20px;
+  position: fixed;
+  top: 95px;
+  color: white;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: $main-blue;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: block;
+  opacity: 1;
+  transition: .3s ease all;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 9px;
+    width: 45px;
+    background: url(../img/tip2.png) transparent center center no-repeat;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: all 0.35s linear;
+    bottom: -5px;
   }
 }
 
