@@ -464,17 +464,17 @@ sup {
 }
 
 .food-card__btn {
-  background-color: transparent;
+  background-color: #071d49;
   border-radius: 20px;
   border: 2px solid #071d49;
-  color: #071d49;
+  color: white;
   padding: 5px 15px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .food-card__btn:hover {
   background-color: #071d49;
-  color: white;
+  color: #cecece;
 }
 
 .tabs {
@@ -685,7 +685,8 @@ sup {
   background-color: #071d49;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  display: block;
+  display: flex;
+  text-align: center;
   opacity: 1;
   transition: 0.3s ease all;
 }

@@ -437,17 +437,17 @@ sup {
 }
 
 .food-card__btn {
-  background-color: transparent;
+  background-color: $main-blue;
   border-radius: 20px;
   border: 2px solid $main-blue;
-  color: $main-blue;
+  color: white;
   padding: 5px 15px;
   cursor: pointer;
   transition: .3s ease;
 
   &:hover {
     background-color: $main-blue;
-    color: white;
+    color: #cecece;
   }
 }
 
@@ -665,7 +665,8 @@ sup {
   background-color: $main-blue;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  display: block;
+  display: flex;
+  text-align: center;
   opacity: 1;
   transition: .3s ease all;
 
