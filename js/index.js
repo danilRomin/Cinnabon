@@ -2,7 +2,7 @@ const body = document.querySelector("body")
 
 function getWidth() {
     const docWidth = document.documentElement.clientWidth
-    return Math.abs(window.innerWidth - docWidth)
+    return Number(window.innerWidth - docWidth)
 }
 
 // Скролл по нажатию на ссылки
@@ -27,7 +27,9 @@ const menu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
-const mark = document.querySelector(".mark")
+const modalProfileBtnMobile = document.querySelector(".icon-profile_mobile")
+
+modalProfileBtnMobile.addEventListener("click", modalOpen)
 
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
@@ -35,7 +37,7 @@ function checkScreenWidth() {
     nav.classList.toggle("hide", isMobile)
     navIcons.classList.toggle("hide", isMobile)
     logoImg.classList.toggle("img-sm", isMobile)
-    mark.classList.toggle("hide", !isMobile)
+    modalProfileBtnMobile.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
 
     if (!isMobile) {
@@ -52,7 +54,7 @@ checkScreenWidth()
 // Вызов функции при изменении ширины экрана
 window.addEventListener("resize", checkScreenWidth)
 
-// Клик по бургеру
+// Клик по бургеру, устранение скачка контента
 menuBtn.addEventListener("click", (event) => {
     menuBtn.classList.toggle("active");
     menu.classList.toggle("active");
@@ -184,3 +186,30 @@ document.querySelectorAll(".menu-section__card").forEach((item) => {
         })
     })
 })
+
+//Модальное окно входа, регистрации
+const modalProfileBtn = document.querySelector(".icon-profile")
+const modalProfile = document.querySelector(".modal-profile")
+const modalProfileOverlay = document.querySelector(".modal-profile-overlay")
+const modalCloseBtn = document.querySelector(".modal_close")
+
+// Открытие модального окна
+modalProfileBtn.addEventListener("click", modalOpen)
+
+// Закрытие
+modalProfileOverlay.addEventListener("click", modalHide)
+modalCloseBtn.addEventListener("click", modalHide)
+
+function modalOpen() {
+    modalProfile.classList.toggle("active")
+    modalProfileOverlay.classList.toggle("active")
+    body.style.paddingRight = `${getWidth()}px`;
+    body.style.overflow = "hidden"
+}
+
+function modalHide() {
+    modalProfileOverlay.classList.toggle("active")
+    modalProfile.classList.toggle("active")
+    body.style.paddingRight = `${getWidth()}px`;
+    body.style.overflow = "auto"
+}

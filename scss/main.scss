@@ -1,6 +1,7 @@
 @import "../fonts/stylesheet.css";
 @import "vars";
 @import "colors";
+@import "modal";
 
 * {
   margin: 0;
@@ -277,7 +278,7 @@ sup {
 .h1 {
   color: #071d49;
   font-size: 40px;
-  margin: 30px 0;
+  padding: 30px 0;
 
   @media (max-width: 1025px) {
     font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -381,6 +382,12 @@ sup {
   flex-direction: column;
   width: 100%;
   background-color: $background-gray;
+  transition: .3s all;
+
+  &:hover {
+    scale: (1.02);
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.1);
+  }
 }
 
 .food-card__title {
@@ -388,8 +395,10 @@ sup {
   flex-direction: column;
 }
 
-.food-card__img {
-  height: 305px;
+.food-card__img-wrapper {
+  max-height: 305px;
+  min-height: 305px;
+  transition: .3s all;
 
   img {
     width: 100%;
@@ -405,6 +414,7 @@ sup {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  height: 100%;
 }
 
 .food-card__name {
@@ -434,6 +444,7 @@ sup {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .food-card__btn {
@@ -452,10 +463,6 @@ sup {
 }
 
 // Табы
-.tabs {
-  margin-top: 30px;
-}
-
 .tabs__head {
   display: flex;
   flex-wrap: wrap;
@@ -591,7 +598,7 @@ sup {
 }
 
 .h1_gap {
-  margin: 30px 0;
+  padding-top: 0;
 }
 
 .main-grid {
@@ -665,10 +672,10 @@ sup {
   background-color: $main-blue;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  display: flex;
   text-align: center;
+  display: flex;
+  transition: .5s ease all;
   opacity: 1;
-  transition: .3s ease all;
 
   &::after {
     content: "";
@@ -683,7 +690,18 @@ sup {
     transition: all 0.35s linear;
     bottom: -5px;
   }
+
+  @media (max-width: $mobile-m) {
+    top: 100px;
+    &::after {
+      display: none;
+    }
+  }
 }
 
-//background-color: #f2f2f2;
-//border-radius: 20px;
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: $main-blue;
+  color: white;
+}

@@ -11,12 +11,15 @@
 <div class="header-wrapper">
     <div class="container">
         <header class="header">
-            <div class="mark hide">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 10.5C15 12.1569 13.6569 13.5 12 13.5C10.3431 13.5 9 12.1569 9 10.5C9 8.84315 10.3431 7.5 12 7.5C13.6569 7.5 15 8.84315 15 10.5Z"
-                          stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19.5 10.5C19.5 17.6421 12 21.75 12 21.75C12 21.75 4.5 17.6421 4.5 10.5C4.5 6.35786 7.85786 3 12 3C16.1421 3 19.5 6.35786 19.5 10.5Z"
-                          stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="nav-icon icon-profile_mobile hide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.75 6C15.75 8.07107 14.0711 9.75 12 9.75C9.92896 9.75 8.25002 8.07107 8.25002 6C8.25002 3.92893 9.92896 2.25 12 2.25C14.0711 2.25 15.75 3.92893 15.75 6Z"
+                          stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M4.50116 20.1182C4.57146 16.0369 7.9019 12.75 12 12.75C16.0983 12.75 19.4287 16.0371 19.4989 20.1185C17.2161 21.166 14.6764 21.75 12.0003 21.75C9.32402 21.75 6.78412 21.1659 4.50116 20.1182Z"
+                          stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round"/>
                 </svg>
             </div>
             <div class="logo">
@@ -25,14 +28,14 @@
                 </a>
             </div>
             <div class="nav">
-                <a class="nav__links link-1" data-goto=".page__section_1" href="#section-1">Главная</a>
-                <a class="nav__links link-2" data-goto=".page__section_2" href="#section-2">Меню</a>
-                <a class="nav__links link-3" data-goto=".page__section_3" href="#section-3">Почему мы</a>
-                <a class="nav__links link-4" data-goto=".page__section_4" href="#section-4">Адреса и доставка</a>
-                <a class="nav__links link-5" href="#section-5">Контакты</a>
+                <a class="nav__links link-1" data-goto=".page__section_1" href="#main">Главная</a>
+                <a class="nav__links link-2" data-goto=".page__section_2" href="#menu">Меню</a>
+                <a class="nav__links link-3" data-goto=".page__section_3" href="#advantages">Почему мы</a>
+                <a class="nav__links link-4" data-goto=".page__section_4" href="#delivery">Адреса и доставка</a>
+                <a class="nav__links link-5" href="#section-5">Новости</a>
             </div>
             <div class="nav-icons">
-                <div class="nav-icon icon-1">
+                <div class="nav-icon icon-profile">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 6C15.75 8.07107 14.0711 9.75 12 9.75C9.92896 9.75 8.25002 8.07107 8.25002 6C8.25002 3.92893 9.92896 2.25 12 2.25C14.0711 2.25 15.75 3.92893 15.75 6Z"
@@ -43,7 +46,7 @@
                               stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="nav-icon icon-2">
+                <div class="nav-icon icon-cart">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 10.5V6C15.75 3.92893 14.0711 2.25 12 2.25C9.92893 2.25 8.25 3.92893 8.25 6V10.5M19.606 8.50723L20.8692 20.5072C20.9391 21.1715 20.4183 21.75 19.7504 21.75H4.24963C3.58172 21.75 3.06089 21.1715 3.13081 20.5072L4.39397 8.50723C4.45424 7.93466 4.93706 7.5 5.51279 7.5H18.4872C19.0629 7.5 19.5458 7.93466 19.606 8.50723ZM8.625 10.5C8.625 10.7071 8.4571 10.875 8.25 10.875C8.04289 10.875 7.875 10.7071 7.875 10.5C7.875 10.2929 8.04289 10.125 8.25 10.125C8.4571 10.125 8.625 10.2929 8.625 10.5ZM16.125 10.5C16.125 10.7071 15.9571 10.875 15.75 10.875C15.5429 10.875 15.375 10.7071 15.375 10.5C15.375 10.2929 15.5429 10.125 15.75 10.125C15.9571 10.125 16.125 10.2929 16.125 10.5Z"
@@ -61,11 +64,10 @@
             <!--            Бургер список-->
             <div class="burger-menu">
                 <div class="menu__nav">
-                    <a class="nav__links link-1" data-goto=".page__section_1" href="#section-1">Главная</a>
-                    <a class="nav__links link-2" data-goto=".page__section_2" href="#section-2">Меню
-                    </a>
-                    <a class="nav__links link-3" data-goto=".page__section_3" href="#section-3">Почему мы</a>
-                    <a class="nav__links link-4" data-goto=".page__section_4" href="#section-4">Адреса и доставка</a>
+                    <a class="nav__links link-1" data-goto=".page__section_1" href="#main">Главная</a>
+                    <a class="nav__links link-2" data-goto=".page__section_2" href="#menu">Меню</a>
+                    <a class="nav__links link-3" data-goto=".page__section_3" href="#advantages">Почему мы</a>
+                    <a class="nav__links link-4" data-goto=".page__section_4" href="#delivery">Адреса и доставка</a>
                     <a class="nav__links link-5" data-goto=".page__section5" href="#section-5">Контакты</a>
                 </div>
                 <div class="links-icons">
@@ -121,7 +123,7 @@
     </div>
 </div>
 <main>
-    <section class="banner-section page__section_1" id="section-1">
+    <section class="banner-section page__section_1" id="main">
         <div class="container">
             <div class="banner-text">
                 <h1 class="banner__h1">
@@ -131,7 +133,7 @@
             </div>
         </div>
     </section>
-    <section class="menu-section page__section_2" id="section-2">
+    <section class="menu-section page__section_2" id="menu">
         <div class="container">
             <h1 class="h1">Меню Cinnabon® Bakery</h1>
             <div class="menu-section__cards-wrapper desktop">
@@ -160,7 +162,7 @@
                 <h1 class="h1">Синнабоны</h1>
                 <div class="menu-grid">
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/classic.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -170,7 +172,7 @@
                             </div>
                             <div class="food-card__info">
                                 Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара высшего ка...
+                                Макара высшего качества.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -181,7 +183,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/peka.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -190,8 +192,7 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара высшего ка...
+                                Роллы с шоколадом, покрытые глазурью с шоколадным топингом. Не содержит корицы
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -202,7 +203,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/cinnabones/cin3.jpg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -211,8 +212,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара высшего ка...
+                                Роллы с ароматной корицей Макара, обильно политые двумя видами карамели и посыпанные
+                                поджаренными орехами Пекан
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -228,7 +229,7 @@
                 <h1 class="h1">Холодный кофе</h1>
                 <div class="menu-grid">
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/frapp.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -237,9 +238,7 @@
                                 <p class="food-card__weight">250 мл.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Напиток на основе эспрессо с пенкой, с добавлением молока, взбитый со льдом.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -250,7 +249,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/frappu.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -259,9 +258,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Напиток из кофе, молока, сиропа и колотого льда, взбитый до образования пены и
+                                украшенный взбитыми сливками.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -272,7 +270,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/raf.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -281,9 +279,7 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Взбитая в капучинаторе смесь из чёрного кофе и сливок, приправленная ванильным сахаром.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -294,7 +290,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/cold.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -303,9 +299,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Итальянский кофейный напиток, сделанный на основе эспрессо. Он обладает мягким вкусом с
+                                легкой кофейной горчинкой.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -316,7 +311,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/oleng.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -325,9 +320,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Традиционный тайский кофе, со сгущенкой и сливками, подаётся в высоких прозрачных
+                                стаканах. Не перемешивать.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -338,7 +332,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/smooth.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -347,9 +341,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                сочетает в себе кофе и фрукты (обычно бананы или ягоды) с добавлением молока или йогурта
+                                и льда.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -365,7 +358,7 @@
                 <h1 class="h1">Чизкейки</h1>
                 <div class="menu-grid">
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/fila.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -374,9 +367,8 @@
                                 <p class="food-card__weight">250 мл.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Десерт, в основе которого лежит крем-чиз, подающийся на тонком слое печенья и
+                                дополняемый различными топингами или ягодами.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -387,7 +379,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/rik.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -396,9 +388,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Нежный десерт, который готовится на основе сыра рикотта, с хрустящим бисквитным
+                                основанием и добавлением топинга.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -409,7 +400,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/japan.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -418,9 +409,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Пушистый десерт с уникальной консистенцией, в составе которого лежат воздушные
+                                ингредиенты, такие как сливочный сыр, сливки и крахмал.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -431,7 +421,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/chika.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -440,9 +430,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Основой десерта является крошка из печенья, начинка состоит из крем-чиза, с
+                                дополнительными ягодными или шоколадными прослойками.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -453,7 +442,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/bakedCheez.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -462,9 +451,8 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Десертное блюдо, состоящее из тонкого песочного коржа, слоя кремового сыра и топинга на
+                                выбор, который плавится и поджаривается в процессе запекания.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -475,7 +463,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/sweden.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -484,9 +472,7 @@
                                 <p class="food-card__weight">250 гр.</p>
                             </div>
                             <div class="food-card__info">
-                                Классическая булочка, покрытая глазурью, в начинку которой входит ароматная корица
-                                Макара
-                                высшего ка...
+                                Десерт на основе творога с добавлением изюма. Подаётся с вареньем или сливками.
                             </div>
                             <div class="food-card__offer">
                                 <p class="food-card__cost">325 ₽</p>
@@ -502,7 +488,7 @@
                 <h1 class="h1">Мороженое</h1>
                 <div class="menu-grid">
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/vanille.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -524,7 +510,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/chokoIce.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -546,7 +532,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/coffeIce.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -568,7 +554,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/cherry.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -590,7 +576,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/nut.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -612,7 +598,7 @@
                         </div>
                     </div>
                     <div class="food-card">
-                        <div class="food-card__img">
+                        <div class="food-card__img-wrapper">
                             <img src="img/foodcard/brulle.jpeg" alt="">
                         </div>
                         <div class="food-card__content">
@@ -637,7 +623,7 @@
             </section>
         </div>
     </section>
-    <section class="tabs-section page__section_3" id="section-3">
+    <section class="tabs-section page__section_3" id="advantages">
         <div class="container-sm">
             <h1 class="h1">Наши преимущества</h1>
             <div class="tabs">
@@ -699,98 +685,112 @@
             </div>
         </div>
     </section>
-<!---->
-    <section class="address page__section_4" id="section-4">
-        <div class="container-sm">
-            <h1 class="h1">Адреса и доставка</h1>
-            <h1 class="h1 h1_gap">Томск</h1>
-            <div class="main-grid">
-                <div class="address__card">
-                    <div class="address__card-img"></div>
-                    <div class="address__info">
-                        <div class="address__card-address">
-                            Обручева, 15
-                        </div>
-                        <div class="address__work-time">
-                            Время работы: С 08:00 до 20:00
-                        </div>
-                        <div class="address__delivery">
-                            <p>Варианты доставки:</p>
-                            <ul>
-                                <li><a href="#">Delivery</a></li>
-                                <li><a href="#">Яндекс.Еда</a></li>
-                                <li><a href="#">СберМаркет</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="address__card">
-                    <div class="address__card-img"></div>
-                    <div class="address__info">
-                        <div class="address__card-address">
-                            Обручева, 14
-                        </div>
-                        <div class="address__work-time">
-                            Время работы: С 08:00 до 20:00
-                        </div>
-                        <div class="address__delivery">
-                            <p>Варианты доставки:</p>
-                            <ul>
-                                <li><a href="#">Delivery</a></li>
-                                <li><a href="#">Яндекс.Еда</a></li>
-                                <li><a href="#">СберМаркет</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="address__card">
-                    <div class="address__card-img"></div>
-                    <div class="address__info">
-                        <div class="address__card-address">
-                            Обручева, 14
-                        </div>
-                        <div class="address__work-time">
-                            Время работы: С 08:00 до 20:00
-                        </div>
-                        <div class="address__delivery">
-                            <p>Варианты доставки:</p>
-                            <ul>
-                                <li><a href="#">Delivery</a></li>
-                                <li><a href="#">Яндекс.Еда</a></li>
-                                <li><a href="#">СберМаркет</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="address__card">
-                    <div class="address__card-img"></div>
-                    <div class="address__info">
-                        <div class="address__card-address">
-                            Обручева, 14
-                        </div>
-                        <div class="address__work-time">
-                            Время работы: С 08:00 до 20:00
-                        </div>
-                        <div class="address__delivery">
-                            <p>Варианты доставки:</p>
-                            <ul>
-                                <li><a href="#">Delivery</a></li>
-                                <li><a href="#">Яндекс.Еда</a></li>
-                                <li><a href="#">СберМаркет</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--    <section class="address page__section_4" id="delivery">-->
+    <!--        <div class="container-sm">-->
+    <!--            <h1 class="h1">Адреса и доставка</h1>-->
+    <!--            <h1 class="h1 h1_gap">Томск</h1>-->
+    <!--            <div class="main-grid">-->
+    <!--                <div class="address__card">-->
+    <!--                    <div class="address__card-img"></div>-->
+    <!--                    <div class="address__info">-->
+    <!--                        <div class="address__card-address">-->
+    <!--                            Обручева, 15-->
+    <!--                        </div>-->
+    <!--                        <div class="address__work-time">-->
+    <!--                            Время работы: С 08:00 до 20:00-->
+    <!--                        </div>-->
+    <!--                        <div class="address__delivery">-->
+    <!--                            <p>Варианты доставки:</p>-->
+    <!--                            <ul>-->
+    <!--                                <li><a href="#">Delivery</a></li>-->
+    <!--                                <li><a href="#">Яндекс.Еда</a></li>-->
+    <!--                                <li><a href="#">СберМаркет</a></li>-->
+    <!--                            </ul>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="address__card">-->
+    <!--                    <div class="address__card-img"></div>-->
+    <!--                    <div class="address__info">-->
+    <!--                        <div class="address__card-address">-->
+    <!--                            Обручева, 14-->
+    <!--                        </div>-->
+    <!--                        <div class="address__work-time">-->
+    <!--                            Время работы: С 08:00 до 20:00-->
+    <!--                        </div>-->
+    <!--                        <div class="address__delivery">-->
+    <!--                            <p>Варианты доставки:</p>-->
+    <!--                            <ul>-->
+    <!--                                <li><a href="#">Delivery</a></li>-->
+    <!--                                <li><a href="#">Яндекс.Еда</a></li>-->
+    <!--                                <li><a href="#">СберМаркет</a></li>-->
+    <!--                            </ul>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="address__card">-->
+    <!--                    <div class="address__card-img"></div>-->
+    <!--                    <div class="address__info">-->
+    <!--                        <div class="address__card-address">-->
+    <!--                            Обручева, 14-->
+    <!--                        </div>-->
+    <!--                        <div class="address__work-time">-->
+    <!--                            Время работы: С 08:00 до 20:00-->
+    <!--                        </div>-->
+    <!--                        <div class="address__delivery">-->
+    <!--                            <p>Варианты доставки:</p>-->
+    <!--                            <ul>-->
+    <!--                                <li><a href="#">Delivery</a></li>-->
+    <!--                                <li><a href="#">Яндекс.Еда</a></li>-->
+    <!--                                <li><a href="#">СберМаркет</a></li>-->
+    <!--                            </ul>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="address__card">-->
+    <!--                    <div class="address__card-img"></div>-->
+    <!--                    <div class="address__info">-->
+    <!--                        <div class="address__card-address">-->
+    <!--                            Обручева, 14-->
+    <!--                        </div>-->
+    <!--                        <div class="address__work-time">-->
+    <!--                            Время работы: С 08:00 до 20:00-->
+    <!--                        </div>-->
+    <!--                        <div class="address__delivery">-->
+    <!--                            <p>Варианты доставки:</p>-->
+    <!--                            <ul>-->
+    <!--                                <li><a href="#">Delivery</a></li>-->
+    <!--                                <li><a href="#">Яндекс.Еда</a></li>-->
+    <!--                                <li><a href="#">СберМаркет</a></li>-->
+    <!--                            </ul>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
 </main>
+<section class="footer">
+    <div class="footer-container">
 
+    </div>
+</section>
 <!--alert (Успешно добавлено)-->
 <div class="cart-notification opacity">
     Успешно добавлено!
 </div>
+<!--Модальное окно-->
+<div class="modal-profile">
+    <h2>Войдите, чтобы участвовать в программе лояльности</h2>
+    <div class="modal_close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L8.93934 10L5.21967 13.7197C4.92678 14.0126 4.92678 14.4874 5.21967 14.7803C5.51256 15.0732 5.98744 15.0732 6.28033 14.7803L10 11.0607L13.7197 14.7803C14.0126 15.0732 14.4874 15.0732 14.7803 14.7803C15.0732 14.4874 15.0732 14.0126 14.7803 13.7197L11.0607 10L14.7803 6.28033C15.0732 5.98744 15.0732 5.51256 14.7803 5.21967C14.4874 4.92678 14.0126 4.92678 13.7197 5.21967L10 8.93934L6.28033 5.21967Z" fill="#0F172A"/>
+        </svg>
+    </div>
+</div>
+<div class="modal-profile-overlay">
 
+</div>
 
 <script src="js/index.js"></script>
 </body>

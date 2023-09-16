@@ -20,10 +20,11 @@ li {
 
 .active {
   opacity: 1 !important;
+  visibility: visible!important;
 }
 
 .opacity {
-  opacity: 0!important;
+  opacity: 0 !important;
 }
 
 .body-overflow {
