@@ -44,7 +44,7 @@ a {
   left: 0;
   background-color: white;
   z-index: 10;
-  position: sticky;
+  //position: sticky;
   width: 100%;
   box-shadow: 0 5px 18px -5px rgba(34, 60, 80, 0.2);
 }
@@ -283,7 +283,7 @@ sup {
   letter-spacing: 1px;
 
   @media (max-width: 1025px) {
-    font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(20px + (100) * ((100vw - 320px) / (1920 - 320)));
   }
 }
 

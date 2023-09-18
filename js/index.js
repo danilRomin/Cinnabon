@@ -170,7 +170,7 @@ toCartBtn.forEach((item) => {
         toCardNotification.classList.remove("opacity")
         setTimeout(function () {
             toCardNotification.classList.add("opacity")
-        },1500)
+        }, 1500)
     })
 })
 
@@ -213,3 +213,42 @@ function modalHide() {
     body.style.paddingRight = `${getWidth()}px`;
     body.style.overflow = "auto"
 }
+
+// Прозрачность ссылок в шапке при наведении
+nav.addEventListener("mouseover", hoverOnLink.bind(0.8))
+nav.addEventListener("mouseout", hoverOnLink.bind(1))
+
+function hoverOnLink(event) {
+    if (event.target.closest(".nav__links")) {
+        const hovered = event.target
+        const links = document.querySelectorAll(".nav__links")
+
+        links.forEach(item => {
+            if (item !== hovered) {
+                item.style.opacity = this
+                item.style.transition = "0.3s"
+            }
+        })
+    }
+}
+
+const header = document.querySelector(".header-wrapper")
+const headerHeight = header.offsetHeight
+function callBack(entries) {
+    if (!entries[0].isIntersecting) {
+        header.style.position = "sticky"
+        header.style.transform = "translateY(0)"
+    } else {
+        header.style.transform = "translateY(-110%)"
+        header.style.position = "relative";
+    }
+    header.style.transition = "0.5s"
+}
+
+const options = {
+    threshold: 0,
+    rootMargin: `-${headerHeight}px`
+}
+
+const observer = new IntersectionObserver(callBack, options)
+observer.observe(document.querySelector(".page__section_1"))
