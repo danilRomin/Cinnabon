@@ -240,7 +240,6 @@ function callBack(entries) {
         header.style.transform = "translateY(0)"
     } else {
         header.style.transform = "translateY(-110%)"
-        header.style.position = "relative";
     }
     header.style.transition = "0.5s"
 }
