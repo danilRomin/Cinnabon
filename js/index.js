@@ -238,7 +238,7 @@ window.addEventListener("scroll", function () {
     const section2 = document.querySelector(".page__section_2");
     const section2Offset = section2.offsetTop;
     const scrollTop = window.window.scrollY
-    const headerHeight = headerWrapper.clientHeight
+    const headerHeight = headerWrapper.clientHeight + 1
 
     if (scrollTop > headerHeight) {
         headerWrapper.style.transform = "translateY(-110%)"
