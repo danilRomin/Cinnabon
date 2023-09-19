@@ -1,10 +1,8 @@
 const body = document.querySelector("body")
 
-if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
-    function getWidth() {
-        const docWidth = document.documentElement.clientWidth
-        return Number(window.innerWidth - docWidth)
-    }
+function getWidth() {
+    const docWidth = document.documentElement.clientWidth
+    return Number(window.innerWidth - docWidth)
 }
 
 // Скролл по нажатию на ссылки
@@ -13,7 +11,7 @@ document.querySelectorAll(".nav__links").forEach((item) => {
         event.preventDefault()
         const navLinks = event.target
         const gotoBlock = document.querySelector(navLinks.dataset.goto)
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector(".header-wrapper").offsetHeight
         burgerMenu.classList.remove("active")
         menuBtn.classList.remove("active")
         body.classList.remove("body-overflow")
@@ -182,7 +180,7 @@ document.querySelectorAll(".menu-section__card").forEach((item) => {
         event.preventDefault()
         const sectionCard = event.target
         const gotoBlock = document.querySelector(sectionCard.dataset.goto)
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
+        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector(".header-wrapper").offsetHeight
         window.scrollTo({
             top: gotoBlockValue, behavior: "smooth"
         })
@@ -234,30 +232,16 @@ function hoverOnLink(event) {
     }
 }
 
-
-// window.addEventListener('scroll', () => {
-//     const headerWrapper = document.querySelector('.header-wrapper');
-//     const section2 = document.querySelector('.page__section_2');
-//     const section2Top = section2.offsetTop;
-//     const headerHeight = headerWrapper.clientHeight
-//
-//     if (window.pageYOffset >= (section2Top - headerHeight)) {
-//         headerWrapper.style.position = 'sticky';
-//     } else {
-//         headerWrapper.style.position = 'relative';
-//     }
-// });
-
+// Анимация шапки при скролле
 window.addEventListener("scroll", function () {
     const headerWrapper = document.querySelector(".header-wrapper");
     const section2 = document.querySelector(".page__section_2");
     const section2Offset = section2.offsetTop;
-    const scrollTop = window.pageYOffset
+    const scrollTop = window.window.scrollY
     const headerHeight = headerWrapper.clientHeight
 
     if (scrollTop > headerHeight) {
         headerWrapper.style.transform = "translateY(-110%)"
-
     } else {
         headerWrapper.style.transform = "translateY(0)"
         headerWrapper.style.position = "relative"

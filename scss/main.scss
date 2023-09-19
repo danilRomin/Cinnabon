@@ -18,8 +18,17 @@ body {
   overflow-x: hidden;
 }
 
-section:not(:first-child, .food-section) {
-  padding-top: 50px;
+// Секции
+section {
+  transition: .7s;
+
+  &:not(:first-child, .food-section) {
+    margin-top: 50px;
+
+    @media (max-width: $mobile-m) {
+      margin-top: 30px;
+    }
+  }
 }
 
 a {
@@ -121,13 +130,7 @@ a {
   cursor: pointer;
 }
 
-// Секции
-.section {
-  transition: .7s;
-}
-
 // Бургер
-
 .menu-btn {
   width: 20px;
   height: 20px;
@@ -193,6 +196,7 @@ a {
 
 .burger-menu__nav .nav__links {
   @media (max-width: 980px) {
+    font-weight: bold;
     width: 100%;
     padding: 3vh;
     transition: .3s ease;
@@ -313,8 +317,15 @@ sup {
   transition: .5s all ease;
 
   &:last-child {
-    margin: 0 0 0 0;
+    @media (min-width: $mobile-m) {
+      margin: 0 0 0 0;
+    }
+  }
 
+  &:first-child {
+    @media (max-width: $mobile-m) {
+      margin: 30px 0 0 0;
+    }
   }
 
   @media (max-width: $mobile-m) {
