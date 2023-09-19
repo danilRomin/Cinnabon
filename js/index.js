@@ -12,7 +12,7 @@ document.querySelectorAll(".nav__links").forEach((item) => {
         const navLinks = event.target
         const gotoBlock = document.querySelector(navLinks.dataset.goto)
         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header-wrapper").offsetHeight
-        menu.classList.remove("active")
+        burgerMenu.classList.remove("active")
         menuBtn.classList.remove("active")
         body.classList.remove("body-overflow")
         body.style.paddingRight = ""
@@ -23,7 +23,7 @@ document.querySelectorAll(".nav__links").forEach((item) => {
 })
 
 const menuBtn = document.querySelector('.menu-btn')
-const menu = document.querySelector('.burger-menu')
+const burgerMenu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
@@ -41,7 +41,7 @@ function checkScreenWidth() {
     menuBtn.classList.toggle("hide", !isMobile)
 
     if (!isMobile) {
-        menu.classList.remove("active")
+        burgerMenu.classList.remove("active")
         menuBtn.classList.remove("active")
         body.classList.remove("body-overflow")
         body.style.paddingRight = ""
@@ -55,9 +55,9 @@ checkScreenWidth()
 window.addEventListener("resize", checkScreenWidth)
 
 // Клик по бургеру, устранение скачка контента
-menuBtn.addEventListener("click", (event) => {
+menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
-    menu.classList.toggle("active");
+    burgerMenu.classList.toggle("active");
     body.style.paddingRight = `${getWidth()}px`;
     body.classList.toggle("body-overflow");
 })
@@ -204,14 +204,14 @@ function modalOpen() {
     modalProfile.classList.toggle("active")
     modalProfileOverlay.classList.toggle("active")
     body.style.paddingRight = `${getWidth()}px`;
-    body.style.overflow = "hidden"
+    body.style.overflowY = "hidden"
 }
 
 function modalHide() {
     modalProfileOverlay.classList.toggle("active")
     modalProfile.classList.toggle("active")
     body.style.paddingRight = `${getWidth()}px`;
-    body.style.overflow = "auto"
+    body.style.overflowY = "auto"
 }
 
 // Прозрачность ссылок в шапке при наведении
@@ -232,22 +232,35 @@ function hoverOnLink(event) {
     }
 }
 
-const header = document.querySelector(".header-wrapper")
-const headerHeight = header.offsetHeight
-function callBack(entries) {
-    if (!entries[0].isIntersecting) {
-        header.style.position = "sticky"
-        header.style.transform = "translateY(0)"
+
+// window.addEventListener('scroll', () => {
+//     const headerWrapper = document.querySelector('.header-wrapper');
+//     const section2 = document.querySelector('.page__section_2');
+//     const section2Top = section2.offsetTop;
+//     const headerHeight = headerWrapper.clientHeight
+//
+//     if (window.pageYOffset >= (section2Top - headerHeight)) {
+//         headerWrapper.style.position = 'sticky';
+//     } else {
+//         headerWrapper.style.position = 'relative';
+//     }
+// });
+
+window.addEventListener('scroll', function () {
+    const headerWrapper = document.querySelector('.header-wrapper');
+    const section2 = document.querySelector('.page__section_2');
+    const section2Offset = section2.offsetTop;
+    const scrollTop = window.pageYOffset
+    const headerHeight = headerWrapper.clientHeight
+
+    if (scrollTop > headerHeight) {
+        headerWrapper.style.transform = "translateY(-110%)"
     } else {
-        header.style.transform = "translateY(-110%)"
+        headerWrapper.style.transform = "translateY(0)"
     }
-    header.style.transition = "0.5s"
-}
 
-const options = {
-    threshold: 0,
-    rootMargin: `-${headerHeight}px`
-}
-
-const observer = new IntersectionObserver(callBack, options)
-observer.observe(document.querySelector(".page__section_1"))
+    if (scrollTop >= (section2Offset - headerHeight)) {
+        headerWrapper.style.transform = "translateY(0)"
+        headerWrapper.style.position = "sticky"
+    }
+});

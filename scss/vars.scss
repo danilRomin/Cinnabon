@@ -39,3 +39,8 @@ $mobile-m: 580px;
   order: 3;
   transition: 3s;
 }
+
+.section_hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}

@@ -47,6 +47,7 @@ a {
   position: relative;
   width: 100%;
   box-shadow: 0 5px 18px -5px rgba(34, 60, 80, 0.2);
+  transition: transform 0.5s;
 }
 
 .header {
@@ -120,6 +121,11 @@ a {
   cursor: pointer;
 }
 
+// Секции
+.section {
+  transition: .7s;
+}
+
 // Бургер
 
 .menu-btn {
@@ -177,9 +183,9 @@ a {
   flex-direction: column;
 }
 
-.menu.active + body {
-  overflow: hidden !important;
-}
+//.menu.active + body {
+//  overflow: hidden !important;
+//}
 
 .menu__nav .nav__links {
   @media (max-width: 980px) {
@@ -283,7 +289,7 @@ sup {
   letter-spacing: 1px;
 
   @media (max-width: 1025px) {
-    font-size: calc(20px + (100) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(25px + (40 - 25) * ((100vw - 320px) / (1025 - 320)));
   }
 }
 
@@ -367,6 +373,7 @@ sup {
 
 //Маленькие карточки с едой
 .menu-grid {
+  transition: .7s;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
@@ -714,5 +721,9 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  margin: 0;
 }
+
+//.header-wrapper--show {
+//  transform: translateY(0)!important;
+//}
