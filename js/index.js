@@ -56,10 +56,10 @@ window.addEventListener("resize", checkScreenWidth)
 
 // Клик по бургеру, устранение скачка контента
 menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    burgerMenu.classList.toggle("active");
-    body.style.paddingRight = `${getWidth()}px`;
-    body.classList.toggle("body-overflow");
+    menuBtn.classList.toggle("active")
+    burgerMenu.classList.toggle("active")
+    body.style.paddingRight = `${getWidth()}px`
+    body.classList.toggle("body-overflow")
 })
 
 //Слайды с едой
@@ -203,14 +203,14 @@ modalCloseBtn.addEventListener("click", modalHide)
 function modalOpen() {
     modalProfile.classList.toggle("active")
     modalProfileOverlay.classList.toggle("active")
-    body.style.paddingRight = `${getWidth()}px`;
+    body.style.paddingRight = `${getWidth()}px`
     body.style.overflowY = "hidden"
 }
 
 function modalHide() {
     modalProfileOverlay.classList.toggle("active")
     modalProfile.classList.toggle("active")
-    body.style.paddingRight = `${getWidth()}px`;
+    body.style.paddingRight = `${getWidth()}px`
     body.style.overflowY = "auto"
 }
 
@@ -234,9 +234,9 @@ function hoverOnLink(event) {
 
 // Анимация шапки при скролле
 window.addEventListener("scroll", function () {
-    const headerWrapper = document.querySelector(".header-wrapper");
-    const section2 = document.querySelector(".page__section_2");
-    const section2Offset = section2.offsetTop;
+    const headerWrapper = document.querySelector(".header-wrapper")
+    const section2 = document.querySelector(".page__section_2")
+    const section2Offset = section2.offsetTop
     const scrollTop = window.window.scrollY
     const headerHeight = headerWrapper.clientHeight + 1
 
@@ -251,4 +251,4 @@ window.addEventListener("scroll", function () {
         headerWrapper.style.transform = "translateY(0)"
         headerWrapper.style.position = "sticky"
     }
-});
+})
