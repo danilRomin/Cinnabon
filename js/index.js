@@ -1,8 +1,10 @@
 const body = document.querySelector("body")
 
-function getWidth() {
-    const docWidth = document.documentElement.clientWidth
-    return Number(window.innerWidth - docWidth)
+if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))) {
+    function getWidth() {
+        const docWidth = document.documentElement.clientWidth
+        return Number(window.innerWidth - docWidth)
+    }
 }
 
 // Скролл по нажатию на ссылки
@@ -246,17 +248,19 @@ function hoverOnLink(event) {
 //     }
 // });
 
-window.addEventListener('scroll', function () {
-    const headerWrapper = document.querySelector('.header-wrapper');
-    const section2 = document.querySelector('.page__section_2');
+window.addEventListener("scroll", function () {
+    const headerWrapper = document.querySelector(".header-wrapper");
+    const section2 = document.querySelector(".page__section_2");
     const section2Offset = section2.offsetTop;
     const scrollTop = window.pageYOffset
     const headerHeight = headerWrapper.clientHeight
 
     if (scrollTop > headerHeight) {
         headerWrapper.style.transform = "translateY(-110%)"
+
     } else {
         headerWrapper.style.transform = "translateY(0)"
+        headerWrapper.style.position = "relative"
     }
 
     if (scrollTop >= (section2Offset - headerHeight)) {

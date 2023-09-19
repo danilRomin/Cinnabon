@@ -157,18 +157,6 @@ a {
 }
 
 // Бургер список
-
-.menu__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-transform: uppercase;
-  color: white !important;
-  margin-top: 10vh;
-  text-align: center;
-  gap: 1vh;
-}
-
 .burger-menu {
   display: flex;
   position: fixed;
@@ -181,13 +169,29 @@ a {
   z-index: 5 !important;
   transition: transform 0.5s;
   flex-direction: column;
+
+  & li {
+    list-style-type: none;
+  }
+
+  &.active {
+    transform: translateX(0px);
+    z-index: 3 !important;
+  }
 }
 
-//.menu.active + body {
-//  overflow: hidden !important;
-//}
+.burger-menu__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: white !important;
+  margin-top: 10vh;
+  text-align: center;
+  gap: 1vh;
+}
 
-.menu__nav .nav__links {
+.burger-menu__nav .nav__links {
   @media (max-width: 980px) {
     width: 100%;
     padding: 3vh;
@@ -207,15 +211,6 @@ a {
   svg {
     max-width: 40px;
   }
-}
-
-.burger-menu.active {
-  transform: translateX(0px);
-  z-index: 3 !important;
-}
-
-.burger-menu li {
-  list-style-type: none;
 }
 
 .menu-btn.active {
@@ -316,6 +311,11 @@ sup {
   background-position: center;
   background-repeat: no-repeat;
   transition: .5s all ease;
+
+  &:last-child {
+    margin: 0 0 0 0;
+
+  }
 
   @media (max-width: $mobile-m) {
     flex: none;
