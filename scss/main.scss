@@ -422,6 +422,11 @@ sup {
   min-height: 305px;
   transition: .3s all;
 
+  @media (max-width: $mobile-m) {
+    max-height: 270px;
+    min-height: 270px;
+  }
+
   img {
     width: 100%;
     height: 100%;

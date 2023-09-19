@@ -544,6 +544,12 @@ sup {
   min-height: 305px;
   transition: 0.3s all;
 }
+@media (max-width: 580px) {
+  .food-card__img-wrapper {
+    max-height: 270px;
+    min-height: 270px;
+  }
+}
 .food-card__img-wrapper img {
   width: 100%;
   height: 100%;
