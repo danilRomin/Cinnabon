@@ -20,7 +20,7 @@ li {
 
 .active {
   opacity: 1 !important;
-  visibility: visible!important;
+  visibility: visible !important;
 }
 
 .opacity {
@@ -40,7 +40,19 @@ $mobile-m: 580px;
   transition: 3s;
 }
 
-.section_hidden {
+.show-element {
+  transition: .7s;
+}
+
+.show-element_left {
+  transition: .7s;
+}
+
+.section-hide_top {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(25px);
+}
+.section-hide_left {
+  opacity: 0;
+  transform: translateX(-75px);
 }

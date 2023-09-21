@@ -38,9 +38,22 @@ li {
   transition: 3s;
 }
 
-.section_hidden {
+.show-element {
+  transition: 0.7s;
+}
+
+.show-element_left {
+  transition: 0.7s;
+}
+
+.section-hide_top {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(25px);
+}
+
+.section-hide_left {
+  opacity: 0;
+  transform: translateX(-75px);
 }
 
 .modal-profile-overlay {
@@ -367,7 +380,7 @@ a {
   position: relative;
 }
 
-.banner-text {
+.banner__text {
   position: absolute;
   display: flex;
   gap: 20px;
@@ -527,9 +540,9 @@ sup {
   flex-direction: column;
   width: 100%;
   background-color: #f2f2f2;
-  transition: 0.3s all;
 }
 .food-card:hover {
+  transition: 0.3s;
   scale: 1.02;
   box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.1);
 }
@@ -853,6 +866,53 @@ input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: #071d49;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1.5s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

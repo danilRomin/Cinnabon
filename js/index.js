@@ -1,5 +1,12 @@
 const body = document.querySelector("body")
 
+// Лоадер
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader-wrapper")
+    loader.style.display = "none"
+})
+
+// Кроссбраузерная ширина скроллбара
 function getWidth() {
     const docWidth = document.documentElement.clientWidth
     return Number(window.innerWidth - docWidth)
@@ -251,4 +258,43 @@ window.addEventListener("scroll", function () {
         headerWrapper.style.transform = "translateY(0)"
         headerWrapper.style.position = "sticky"
     }
+})
+
+// Анимация при появлении
+
+const showElement = document.querySelectorAll(".show-element")
+
+function showElementFunction(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove("section-hide_top")
+        } else {
+            entry.target.classList.add("section-hide_top")
+        }
+    })
+}
+
+const showObserver = new IntersectionObserver(showElementFunction, {threshold: 0.1})
+showElement.forEach(item => {
+    showObserver.observe(item)
+    item.classList.add("section-hide_top")
+})
+
+const showElementLeft = document.querySelectorAll(".show-element_left")
+
+function showElementFunctionLeft(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove("section-hide_left")
+        } else {
+            entry.target.classList.add("section-hide_left")
+        }
+    })
+}
+
+const showObserverLeft = new IntersectionObserver(showElementFunctionLeft, {threshold: 0.1})
+
+showElementLeft.forEach(item => {
+    showObserverLeft.observe(item)
+    item.classList.add("section-hide_left")
 })
