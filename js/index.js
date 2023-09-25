@@ -268,8 +268,6 @@ function showElementFunction(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.remove("section-hide_top")
-        } else {
-            entry.target.classList.add("section-hide_top")
         }
     })
 }
@@ -286,8 +284,6 @@ function showElementFunctionLeft(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.remove("section-hide_left")
-        } else {
-            entry.target.classList.add("section-hide_left")
         }
     })
 }
@@ -298,3 +294,17 @@ showElementLeft.forEach(item => {
     showObserverLeft.observe(item)
     item.classList.add("section-hide_left")
 })
+
+
+
+window.onload = function () {
+    if (localStorage.getItem("hasCodeRunBefore") === null) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                console.log(position)
+            }, function () {
+                alert("Вы запретили доступ к своей геолокации.")
+            })
+        localStorage.setItem("hasCodeRunBefore", true);
+    }
+}
