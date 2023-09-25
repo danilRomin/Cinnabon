@@ -1,10 +1,10 @@
 const body = document.querySelector("body")
 
 // Лоадер
-window.addEventListener("load", function () {
+// window.addEventListener("load", function () {
     const loader = document.querySelector(".loader-wrapper")
     loader.style.display = "none"
-})
+// })
 
 // Кроссбраузерная ширина скроллбара
 function getWidth() {
@@ -295,16 +295,10 @@ showElementLeft.forEach(item => {
     item.classList.add("section-hide_left")
 })
 
+navigator.geolocation.getCurrentPosition(
+    function (position) {
+        console.log(position)
+    }, function () {
+        alert("Вы запретили доступ к своей геолокации.")
+    })
 
-
-window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
-        navigator.geolocation.getCurrentPosition(
-            function (position) {
-                console.log(position)
-            }, function () {
-                alert("Вы запретили доступ к своей геолокации.")
-            })
-        localStorage.setItem("hasCodeRunBefore", true);
-    }
-}
