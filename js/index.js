@@ -29,27 +29,19 @@ document.querySelectorAll(".nav__links").forEach((item) => {
     })
 })
 
-const cartMobile = document.querySelector(".cart_mobile")
+const iconProfile = document.querySelector(".icon-profile")
 const menuBtn = document.querySelector('.menu-btn')
 const burgerMenu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
-const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
-const modalCartBtnMobile = document.querySelector(".icon-cart_mobile")
-// const modalCartBtnMobile = document.querySelector(".icon-cart_mobile")
-
-// modalProfileBtnMobile.addEventListener("click", modalOpen)
-
 
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
     const isMobile = window.innerWidth <= 980
     nav.classList.toggle("hide", isMobile)
-    navIcons.classList.toggle("hide", isMobile)
     logoImg.classList.toggle("img-sm", isMobile)
-    modalCartBtnMobile.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
-    cartMobile.classList.toggle("hide", !isMobile)
+    iconProfile.classList.toggle("hide", isMobile)
 
     if (!isMobile) {
         burgerMenu.classList.remove("active")
@@ -318,9 +310,16 @@ showElementLeft.forEach(item => {
     item.classList.add("section-hide_left")
 })
 
-// navigator.geolocation.getCurrentPosition(
-//     function (position) {
-//         console.log(position)
-//     }, function () {
-//         alert("Вы запретили доступ к своей геолокации.")
-//     })
+const cart = document.querySelector(".cart")
+const dropdownContent = document.querySelector(".dropdown-content")
+
+cart.addEventListener("click", () => {
+    dropdownContent.classList.toggle("show_flex")
+})
+
+window.addEventListener("click", (event) => {
+    if (!event.target.closest(".cart") && dropdownContent.classList.contains("show_flex")) {
+        dropdownContent.classList.remove("show_flex")
+
+    }
+})

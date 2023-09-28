@@ -2,6 +2,10 @@
   display: none !important;
 }
 
+.show_flex {
+  display: flex!important;
+}
+
 li {
   list-style-type: none;
 }
@@ -54,6 +58,7 @@ $desktop-s: 980px;
   opacity: 0;
   transform: translateY(25px);
 }
+
 .section-hide_left {
   opacity: 0;
   transform: translateX(-75px);
