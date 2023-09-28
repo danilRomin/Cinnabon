@@ -34,9 +34,11 @@ const burgerMenu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
 const navIcons = document.querySelector(".nav-icons")
 const logoImg = document.querySelector(".logo__img")
-const modalProfileBtnMobile = document.querySelector(".icon-profile_mobile")
+const modalCartBtnMobile = document.querySelector(".icon-cart_mobile")
+// const modalCartBtnMobile = document.querySelector(".icon-cart_mobile")
 
-modalProfileBtnMobile.addEventListener("click", modalOpen)
+// modalProfileBtnMobile.addEventListener("click", modalOpen)
+
 
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
@@ -44,7 +46,7 @@ function checkScreenWidth() {
     nav.classList.toggle("hide", isMobile)
     navIcons.classList.toggle("hide", isMobile)
     logoImg.classList.toggle("img-sm", isMobile)
-    modalProfileBtnMobile.classList.toggle("hide", !isMobile)
+    modalCartBtnMobile.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
 
     if (!isMobile) {
@@ -295,10 +297,9 @@ showElementLeft.forEach(item => {
     item.classList.add("section-hide_left")
 })
 
-navigator.geolocation.getCurrentPosition(
-    function (position) {
-        console.log(position)
-    }, function () {
-        alert("Вы запретили доступ к своей геолокации.")
-    })
-
+// navigator.geolocation.getCurrentPosition(
+//     function (position) {
+//         console.log(position)
+//     }, function () {
+//         alert("Вы запретили доступ к своей геолокации.")
+//     })

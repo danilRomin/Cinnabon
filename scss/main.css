@@ -907,6 +907,8 @@ sup {
   width: 100%;
   background-color: #071d49;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -916,8 +918,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.image-slider__image img {
-  max-width: 100%;
+.footer__content {
+  padding: 50px 0 10px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

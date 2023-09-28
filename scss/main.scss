@@ -733,6 +733,8 @@ sup {
   width: 100%;
   background-color: $main-blue;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -742,8 +744,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-// Слайдер
-
-.image-slider__image img {
-  max-width: 100%;
+.footer__content {
+  padding: 50px 0 10px 0;
 }
