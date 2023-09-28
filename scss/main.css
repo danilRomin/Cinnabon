@@ -323,6 +323,37 @@ a {
   cursor: pointer;
 }
 
+.icon-profile {
+  transition: 0.2s;
+}
+.icon-profile:hover {
+  scale: 1.1;
+}
+
+.cart {
+  position: relative;
+  transition: 0.2s;
+}
+.cart:hover {
+  scale: 1.1;
+}
+
+.icon-cart-number {
+  position: absolute;
+  background-color: #071d49;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
 .menu-btn {
   width: 20px;
   height: 20px;
@@ -349,12 +380,13 @@ a {
 }
 
 .burger-menu {
+  overflow: auto;
   display: flex;
   position: fixed;
   top: 89px;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: rgb(16, 29, 73);
   transform: translateX(100%);
   z-index: 5 !important;
@@ -384,7 +416,7 @@ a {
   .burger-menu__nav .nav__links {
     font-weight: bold;
     width: 100%;
-    padding: 3vh;
+    padding: 20px;
     transition: 0.3s ease;
   }
   .burger-menu__nav .nav__links:hover {
@@ -608,10 +640,10 @@ sup {
   min-height: 305px;
   transition: 0.3s all;
 }
-@media (max-width: 580px) {
+@media (max-width: 980px) {
   .food-card__img-wrapper {
-    max-height: 270px;
-    min-height: 270px;
+    max-height: 225px;
+    min-height: 225px;
   }
 }
 .food-card__img-wrapper img {

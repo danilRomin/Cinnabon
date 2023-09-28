@@ -2,8 +2,8 @@ const body = document.querySelector("body")
 
 // Лоадер
 // window.addEventListener("load", function () {
-    const loader = document.querySelector(".loader-wrapper")
-    loader.style.display = "none"
+const loader = document.querySelector(".loader-wrapper")
+loader.style.display = "none"
 // })
 
 // Кроссбраузерная ширина скроллбара
@@ -29,6 +29,7 @@ document.querySelectorAll(".nav__links").forEach((item) => {
     })
 })
 
+const cartMobile = document.querySelector(".cart_mobile")
 const menuBtn = document.querySelector('.menu-btn')
 const burgerMenu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
@@ -48,6 +49,7 @@ function checkScreenWidth() {
     logoImg.classList.toggle("img-sm", isMobile)
     modalCartBtnMobile.classList.toggle("hide", !isMobile)
     menuBtn.classList.toggle("hide", !isMobile)
+    cartMobile.classList.toggle("hide", !isMobile)
 
     if (!isMobile) {
         burgerMenu.classList.remove("active")
@@ -66,10 +68,16 @@ window.addEventListener("resize", checkScreenWidth)
 // Клик по бургеру, устранение скачка контента
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active")
+    console.log(menuBtn.parentNode)
     burgerMenu.classList.toggle("active")
     body.style.paddingRight = `${getWidth()}px`
     body.classList.toggle("body-overflow")
 })
+
+// Корзина
+// const cartNumber = document.querySelectorAll(".icon-cart-number")
+// cartNumber
+
 
 //Слайды с едой
 const slide = document.querySelectorAll(".menu-section__card")
@@ -264,12 +272,23 @@ window.addEventListener("scroll", function () {
 
 // Анимация при появлении
 
+// let prevScrollPos = window.scrollY || document.documentElement.scrollTop;
+// window.addEventListener('scroll', function() {
+//     let currentScrollPos = window.scrollY || document.documentElement.scrollTop;
+//     if (prevScrollPos < currentScrollPos) {
+//
+//         console.log('Скролл вниз');
+//     }
+//     prevScrollPos = currentScrollPos;
+// });
+
 const showElement = document.querySelectorAll(".show-element")
 
 function showElementFunction(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove("section-hide_top")
+    entries.forEach(item => {
+        if (item.isIntersecting) {
+            item.target.classList.remove("section-hide_top")
+            //  при скролле убирается hide
         }
     })
 }
@@ -280,12 +299,14 @@ showElement.forEach(item => {
     item.classList.add("section-hide_top")
 })
 
+// Анимация для заголовка в первом блоке
 const showElementLeft = document.querySelectorAll(".show-element_left")
 
 function showElementFunctionLeft(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove("section-hide_left")
+    entries.forEach(item => {
+        if (item.isIntersecting) {
+            item.target.classList.remove("section-hide_left")
+            //  при скролле убирается hide
         }
     })
 }

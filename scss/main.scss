@@ -131,6 +131,39 @@ a {
   cursor: pointer;
 }
 
+.icon-profile {
+  transition: .2s;
+
+  &:hover {
+    scale: (1.1);
+  }
+}
+
+.cart {
+  position: relative;
+  transition: .2s;
+
+  &:hover {
+    scale: (1.1);
+  }
+}
+
+.icon-cart-number {
+  position: absolute;
+  background-color: $main-blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
 // Бургер
 .menu-btn {
   width: 20px;
@@ -162,6 +195,7 @@ a {
 
 // Бургер список
 .burger-menu {
+  overflow: auto;
   display: flex;
   position: fixed;
   top: 89px;
@@ -199,7 +233,7 @@ a {
   @media (max-width: 980px) {
     font-weight: bold;
     width: 100%;
-    padding: 3vh;
+    padding: 20px;
     transition: .3s ease;
     &:hover {
       background-color: #ffffff38;
@@ -427,9 +461,9 @@ sup {
   min-height: 305px;
   transition: .3s all;
 
-  @media (max-width: $mobile-m) {
-    max-height: 270px;
-    min-height: 270px;
+  @media (max-width: $desktop-s) {
+    max-height: 225px;
+    min-height: 225px;
   }
 
   img {
