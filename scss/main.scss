@@ -17,6 +17,7 @@
 
 body {
   overflow-x: hidden;
+
 }
 
 // Секции
@@ -807,11 +808,7 @@ input::-webkit-inner-spin-button {
 
 .dropdown-content__cards {
   max-height: 434px;
-  //overflow: auto;
-}
-
-.dropdown-content__cards::-webkit-scrollbar {
-  width: 0;
+  overflow: auto;
 }
 
 .dropdown-content__card {
@@ -932,4 +929,14 @@ input::-webkit-inner-spin-button {
     background-color: $main-blue;
     color: white;
   }
+}
+
+.dropdown-content__cards::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+.dropdown-content__cards::-webkit-scrollbar-track {
+  background: white;        /* цвет дорожки */
+}
+.dropdown-content__cards::-webkit-scrollbar-thumb {
+  background-color: $main-blue;    /* цвет плашки */
 }

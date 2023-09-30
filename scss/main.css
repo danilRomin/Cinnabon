@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../fonts/stylesheet.css";
 .hide {
   display: none !important;
@@ -988,10 +989,7 @@ input::-webkit-inner-spin-button {
 
 .dropdown-content__cards {
   max-height: 434px;
-}
-
-.dropdown-content__cards::-webkit-scrollbar {
-  width: 0;
+  overflow: auto;
 }
 
 .dropdown-content__card {
@@ -1107,6 +1105,18 @@ input::-webkit-inner-spin-button {
   border: 1px solid #071d49;
   background-color: #071d49;
   color: white;
+}
+
+.dropdown-content__cards::-webkit-scrollbar {
+  width: 12px; /* ширина scrollbar */
+}
+
+.dropdown-content__cards::-webkit-scrollbar-track {
+  background: white; /* цвет дорожки */
+}
+
+.dropdown-content__cards::-webkit-scrollbar-thumb {
+  background-color: #071d49; /* цвет плашки */
 }
 
 /*# sourceMappingURL=main.css.map */
