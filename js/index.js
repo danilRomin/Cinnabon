@@ -310,16 +310,29 @@ showElementLeft.forEach(item => {
     item.classList.add("section-hide_left")
 })
 
+// Корзина
 const cart = document.querySelector(".cart")
 const dropdownContent = document.querySelector(".dropdown-content")
+const cartNumber = document.querySelector(".icon-cart-number")
 
+// Открытие выпадающего списка
 cart.addEventListener("click", () => {
     dropdownContent.classList.toggle("show_flex")
 })
+dropdownContent.addEventListener("click", (event) => {
+    event.stopPropagation();
+});
 
+// Закрытие выпадающего списка
 window.addEventListener("click", (event) => {
     if (!event.target.closest(".cart") && dropdownContent.classList.contains("show_flex")) {
         dropdownContent.classList.remove("show_flex")
 
     }
 })
+
+// function changeCartNumber() {
+//     cartNumber.innerHTML = document.getElementsByClassName("dropdown-content__card").length
+// }
+//
+// changeCartNumber()

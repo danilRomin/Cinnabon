@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cinnabon</title>
+    <link rel="stylesheet" href="scss/simplebar.css"/>
     <link rel="stylesheet" href="scss/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/free-icon-piece-of-cake-3658450.png" type="image/x-icon">
@@ -28,10 +29,10 @@
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.75 6C15.75 8.07107 14.0711 9.75 12 9.75C9.92896 9.75 8.25002 8.07107 8.25002 6C8.25002 3.92893 9.92896 2.25 12 2.25C14.0711 2.25 15.75 3.92893 15.75 6Z"
-                              stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                              stroke-width="1.5" stroke-linecap="round"
                               stroke-linejoin="round"/>
                         <path d="M4.50116 20.1182C4.57146 16.0369 7.9019 12.75 12 12.75C16.0983 12.75 19.4287 16.0371 19.4989 20.1185C17.2161 21.166 14.6764 21.75 12.0003 21.75C9.32402 21.75 6.78412 21.1659 4.50116 20.1182Z"
-                              stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                              stroke-width="1.5" stroke-linecap="round"
                               stroke-linejoin="round"/>
                     </svg>
                 </div>
@@ -40,7 +41,7 @@
                         <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.75 10.5V6C15.75 3.92893 14.0711 2.25 12 2.25C9.92893 2.25 8.25 3.92893 8.25 6V10.5M19.606 8.50723L20.8692 20.5072C20.9391 21.1715 20.4183 21.75 19.7504 21.75H4.24963C3.58172 21.75 3.06089 21.1715 3.13081 20.5072L4.39397 8.50723C4.45424 7.93466 4.93706 7.5 5.51279 7.5H18.4872C19.0629 7.5 19.5458 7.93466 19.606 8.50723ZM8.625 10.5C8.625 10.7071 8.4571 10.875 8.25 10.875C8.04289 10.875 7.875 10.7071 7.875 10.5C7.875 10.2929 8.04289 10.125 8.25 10.125C8.4571 10.125 8.625 10.2929 8.625 10.5ZM16.125 10.5C16.125 10.7071 15.9571 10.875 15.75 10.875C15.5429 10.875 15.375 10.7071 15.375 10.5C15.375 10.2929 15.5429 10.125 15.75 10.125C15.9571 10.125 16.125 10.2929 16.125 10.5Z"
-                                  stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-width="1.5" stroke-linecap="round"
                                   stroke-linejoin="round"/>
                         </svg>
                     </div>
@@ -48,30 +49,110 @@
                         0
                     </div>
                     <div class="dropdown-content">
-                        <div class="dropdown-content__card">
-                            <div class="dropdown-content__img-wrapper">
-                                <img class="dropdown-content__img" src="img/foodcard/classic.jpeg" alt="">
-                            </div>
-                            <div class="dropdown-content__text">
-                                <div class="dropdown-content__tittle">
-                                    Классический синнабон
+                        <div class="dropdown-content__cards" data-simplebar>
+                            <div class="dropdown-content__card">
+                                <div class="dropdown-content__img-wrapper">
+                                    <img class="dropdown-content__img" src="img/foodcard/classic.jpeg" alt="">
                                 </div>
-                                <div class="dropdown-content__price">
-                                    325 ₽
+                                <div class="dropdown-content__text">
+                                    <div class="dropdown-content__tittle">
+                                        Классический синнабон
+                                    </div>
+                                    <div class="counter">
+                                        <button class="decrement-btn">-</button>
+                                        <div class="counter-value">1</div>
+                                        <button class="increment-btn">+</button>
+                                    </div>
+                                    <!--                                <button id="reset">Reset</button>-->
+                                    <div class="dropdown-content__price">
+                                        325 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-content__card">
+                                <div class="dropdown-content__img-wrapper">
+                                    <img class="dropdown-content__img" src="img/foodcard/classic.jpeg" alt="">
+                                </div>
+                                <div class="dropdown-content__text">
+                                    <div class="dropdown-content__tittle">
+                                        Классический синнабон
+                                    </div>
+                                    <div class="counter">
+                                        <button class="decrement-btn">-</button>
+                                        <div class="counter-value">1</div>
+                                        <button class="increment-btn">+</button>
+                                    </div>
+                                    <!--                                <button id="reset">Reset</button>-->
+                                    <div class="dropdown-content__price">
+                                        325 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-content__card">
+                                <div class="dropdown-content__img-wrapper">
+                                    <img class="dropdown-content__img" src="img/foodcard/classic.jpeg" alt="">
+                                </div>
+                                <div class="dropdown-content__text">
+                                    <div class="dropdown-content__tittle">
+                                        Классический синнабон
+                                    </div>
+                                    <div class="counter">
+                                        <button class="decrement-btn">-</button>
+                                        <div class="counter-value">1</div>
+                                        <button class="increment-btn">+</button>
+                                    </div>
+                                    <!--                                <button id="reset">Reset</button>-->
+                                    <div class="dropdown-content__price">
+                                        325 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-content__card">
+                                <div class="dropdown-content__img-wrapper">
+                                    <img class="dropdown-content__img" src="img/foodcard/classic.jpeg" alt="">
+                                </div>
+                                <div class="dropdown-content__text">
+                                    <div class="dropdown-content__tittle">
+                                        Классический синнабон
+                                    </div>
+                                    <div class="counter">
+                                        <button class="decrement-btn">-</button>
+                                        <div class="counter-value">1</div>
+                                        <button class="increment-btn">+</button>
+                                    </div>
+                                    <!--                                <button id="reset">Reset</button>-->
+                                    <div class="dropdown-content__price">
+                                        325 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-content__card">
+                                <div class="dropdown-content__img-wrapper">
+                                    <img class="dropdown-content__img" src="img/foodcard/classic.jpeg" alt="">
+                                </div>
+                                <div class="dropdown-content__text">
+                                    <div class="dropdown-content__tittle">
+                                        Классический синнабон
+                                    </div>
+                                    <div class="counter">
+                                        <button class="decrement-btn">-</button>
+                                        <div class="counter-value">1</div>
+                                        <button class="increment-btn">+</button>
+                                    </div>
+                                    <!--                                <button id="reset">Reset</button>-->
+                                    <div class="dropdown-content__price">
+                                        325 ₽
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="dropdown-content__card">
-                            <div class="dropdown-content__img-wrapper">
-                                <img class="dropdown-content__img" src="img/foodcard/choko.jpeg" alt="">
+                        <div class="dropdown-content__offer">
+                            <div class="dropdown-content__result">
+                                <p>Итого:</p>
+                                <p>325 ₽</p>
                             </div>
-                            <div class="dropdown-content__text">
-                                <div class="dropdown-content__tittle">
-                                    Классический синнабон
-                                </div>
-                                <div class="dropdown-content__price">
-                                    325 ₽
-                                </div>
+                            <div class="dropdown-content__order">
+                                <button class="dropdown-btn order-btn">Оформить заказ</button>
                             </div>
                         </div>
                     </div>
@@ -755,6 +836,8 @@
 <!--Подложка модального окна-->
 <div class="modal-profile-overlay"></div>
 
+<script src="js/simplebar.js"></script>
 <script src="js/index.js"></script>
+
 </body>
 </html>
