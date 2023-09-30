@@ -932,11 +932,19 @@ input::-webkit-inner-spin-button {
 }
 
 .dropdown-content__cards::-webkit-scrollbar {
-  width: 12px;               /* ширина scrollbar */
+  width: 5px;
+  right: 5px;
+  /* ширина scrollbar */
 }
 .dropdown-content__cards::-webkit-scrollbar-track {
   background: white;        /* цвет дорожки */
+  right: 5px;
+  width: 5px;
+
 }
 .dropdown-content__cards::-webkit-scrollbar-thumb {
   background-color: $main-blue;    /* цвет плашки */
+  right: 5px;
+  width: 5px;
+
 }
