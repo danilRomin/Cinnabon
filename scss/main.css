@@ -136,7 +136,7 @@ li {
 
 .modal__phone-btn {
   width: 100%;
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   color: white;
   padding: 10px 0;
   text-transform: uppercase;
@@ -182,7 +182,7 @@ li {
 .loader::before {
   content: "";
   position: absolute;
-  background: #071d49;
+  background: rgb(7, 29, 73);
   top: 0;
   left: 0;
   width: 0;
@@ -319,7 +319,7 @@ a {
   }
 }
 .nav__links:hover {
-  color: #071d49;
+  color: rgb(7, 29, 73);
   transition: 0.3s ease;
 }
 
@@ -342,7 +342,7 @@ a {
 }
 
 .nav-icon:hover {
-  stroke: #071d49;
+  stroke: rgb(7, 29, 73);
 }
 
 .cart {
@@ -352,7 +352,7 @@ a {
 .icon-cart-number {
   position: absolute;
   pointer-events: none;
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -681,7 +681,7 @@ sup {
 }
 
 .food-card__name {
-  color: #071d49;
+  color: rgb(7, 29, 73);
   font-weight: bold;
 }
 
@@ -711,16 +711,16 @@ sup {
 }
 
 .food-card__btn {
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   border-radius: 20px;
-  border: 2px solid #071d49;
+  border: 2px solid rgb(7, 29, 73);
   color: white;
   padding: 5px 15px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .food-card__btn:hover {
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   color: #cecece;
 }
 
@@ -765,7 +765,7 @@ sup {
   color: white;
 }
 .tabs__tab-btn.active-tab {
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   color: white;
   font-size: 14px;
   transform: translateY(0px);
@@ -879,7 +879,7 @@ sup {
 .address__card-address {
   font-weight: bold;
   margin-top: 10px;
-  color: #071d49;
+  color: rgb(7, 29, 73);
 }
 
 .address__card {
@@ -899,7 +899,7 @@ sup {
   border-bottom: 1px solid black;
   padding-bottom: 1px;
   font-weight: 500;
-  color: #071d49;
+  color: rgb(7, 29, 73);
   text-align: -webkit-center;
 }
 
@@ -925,7 +925,7 @@ sup {
   color: white;
   margin-left: 50%;
   transform: translateX(-50%);
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -955,7 +955,7 @@ sup {
 .footer {
   margin-top: 50px;
   width: 100%;
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   color: white;
   display: flex;
   justify-content: center;
@@ -999,7 +999,7 @@ input::-webkit-inner-spin-button {
   gap: 20px;
   min-height: 120px;
   transition: 0.3s;
-  width: 400px;
+  width: 100%;
 }
 .dropdown-content__card:not(:last-child) {
   border-bottom: 1px solid #d8d8d8;
@@ -1022,7 +1022,7 @@ input::-webkit-inner-spin-button {
   max-height: 80px;
   object-fit: cover;
   border-radius: 10px;
-  border: 1px solid #071d49;
+  border: 1px solid rgb(7, 29, 73);
 }
 
 .dropdown-content__text {
@@ -1035,7 +1035,7 @@ input::-webkit-inner-spin-button {
 
 .dropdown-content__tittle {
   text-wrap: nowrap;
-  color: #071d49;
+  color: rgb(7, 29, 73);
   font-size: 14px;
 }
 
@@ -1054,15 +1054,15 @@ input::-webkit-inner-spin-button {
   height: 25px;
   width: 25px;
   border-radius: 100%;
-  border: 2px solid #071d49;
-  color: #071d49;
+  border: 2px solid rgb(7, 29, 73);
+  color: rgb(7, 29, 73);
   background-color: transparent;
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
 }
 .increment-btn:hover, .decrement-btn:hover, .reset:hover {
-  background-color: #071d49;
+  background-color: rgb(7, 29, 73);
   color: white;
 }
 
@@ -1102,26 +1102,25 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 .order-btn:hover {
-  border: 1px solid #071d49;
-  background-color: #071d49;
+  border: 1px solid rgb(7, 29, 73);
+  background-color: rgb(7, 29, 73);
   color: white;
 }
 
 .dropdown-content__cards::-webkit-scrollbar {
   width: 5px;
-  right: 5px;
-  /* ширина scrollbar */
 }
 
 .dropdown-content__cards::-webkit-scrollbar-track {
   background: white; /* цвет дорожки */
-  right: 5px;
   width: 5px;
 }
 
 .dropdown-content__cards::-webkit-scrollbar-thumb {
-  background-color: #071d49; /* цвет плашки */
-  right: 5px;
+  background-color: rgb(7, 29, 73); /* цвет плашки */
+}
+
+.dropdown-content__cards::-webkit-scrollbar {
   width: 5px;
 }
 
