@@ -5,7 +5,17 @@ const body = document.querySelector("body")
 // const loader = document.querySelector(".loader-wrapper")
 // loader.style.display = "none"
 // })
+window.addEventListener("load", function() {
+    // Получить первую секцию
+    let firstSection = document.getElementById("main");
 
+    // Добавить класс для отображения
+    firstSection.classList.add("loaded");
+
+    // Отобразить всю страницу
+    document.body.style.opacity = 1;
+    document.body.style.visibility = "visible";
+});
 // Кроссбраузерная ширина скроллбара
 function getWidth() {
     const docWidth = document.documentElement.clientWidth
