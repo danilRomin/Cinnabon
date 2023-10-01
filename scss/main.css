@@ -213,14 +213,7 @@ li {
 }
 
 body {
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-}
-
-.page__section_1.loaded {
-  display: block;
+  overflow-x: hidden;
 }
 
 section {
