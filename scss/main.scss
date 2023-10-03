@@ -530,6 +530,11 @@ sup {
   cursor: pointer;
   transition: .3s ease;
 
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
   &:hover {
     background-color: $main-blue;
     color: #cecece;
@@ -958,3 +963,4 @@ input::-webkit-inner-spin-button {
 .dropdown-content__cards::-webkit-scrollbar {
   width: 5px;
 }
+

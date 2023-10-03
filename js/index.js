@@ -364,7 +364,6 @@ const printQuantity = () => {
         cart.classList.remove("active")
         cartQuantity.innerText = 0
     }
-    console.log(length)
 }
 
 const generateCardProduct = (img, title, price, id) => {
