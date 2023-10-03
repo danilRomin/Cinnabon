@@ -808,11 +808,21 @@ input::-webkit-inner-spin-button {
   margin-top: 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media (max-width: $mobile) {
+    overflow-x: hidden;
+    width: 90vw;
+    min-width: unset;
+    position: fixed;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 .dropdown-content__cards {
   max-height: 434px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .dropdown-content__card {

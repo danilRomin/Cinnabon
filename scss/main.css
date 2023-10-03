@@ -990,10 +990,21 @@ input::-webkit-inner-spin-button {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+@media (max-width: 500px) {
+  .dropdown-content {
+    overflow-x: hidden;
+    width: 90vw;
+    min-width: unset;
+    position: fixed;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
 
 .dropdown-content__cards {
   max-height: 434px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .dropdown-content__card {
