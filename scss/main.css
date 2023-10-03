@@ -993,6 +993,7 @@ input::-webkit-inner-spin-button {
 }
 
 .dropdown-content__card {
+  position: relative;
   padding: 10px 20px;
   text-decoration: none;
   display: flex;
@@ -1050,7 +1051,7 @@ input::-webkit-inner-spin-button {
   font-weight: lighter;
 }
 
-.increment-btn, .decrement-btn, .reset {
+.increment-btn, .decrement-btn {
   height: 25px;
   width: 25px;
   border-radius: 100%;
@@ -1061,13 +1062,9 @@ input::-webkit-inner-spin-button {
   transition: 0.3s;
   cursor: pointer;
 }
-.increment-btn:hover, .decrement-btn:hover, .reset:hover {
+.increment-btn:hover, .decrement-btn:hover {
   background-color: rgb(7, 29, 73);
   color: white;
-}
-
-.reset {
-  font-size: 20px;
 }
 
 .counter-value {
@@ -1077,6 +1074,20 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dropdown-content__trash-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  stroke: #d8d8d8;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.dropdown-content__trash-icon:hover {
+  stroke: black;
 }
 
 .dropdown-content__offer {
