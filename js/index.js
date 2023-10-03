@@ -366,9 +366,9 @@ const printQuantity = () => {
     }
 }
 
-const generateCardProduct = (img, title, price, id) => {
+const generateCard = (img, title, price, id) => {
     return `
-    <div class="dropdown-content__card data-id='${id}'">
+    <div class="dropdown-content__card" data-id='${id}'>
                                 <div class="dropdown-content__img-wrapper">
                                     <img class="dropdown-content__img" src="${img}" alt="">
                                 </div>
@@ -412,7 +412,7 @@ foodCardBtn.forEach((item) => {
         //     Итоговая цена
         printFullPrice()
         //     Добавить в корзину
-        dropdownCards.insertAdjacentHTML("afterbegin", generateCardProduct(img, title, priceNumber, id))
+        dropdownCards.insertAdjacentHTML("afterbegin", generateCard(img, title, priceNumber, id))
         //     Количество товара в корзине
         printQuantity()
         //     disabled btn
@@ -427,12 +427,15 @@ foodCardBtn.forEach((item) => {
     })
 })
 
+function deleteCards(cardParent) {
+//     Получить id
+    let id = cardParent.querySelector(".dropdown-content__card").dataset.id
 
-// toCartBtn.forEach((item) => {
-//     item.addEventListener("click", () => {
-//         toCardNotification.classList.remove("opacity")
-//         setTimeout(function () {
-//             toCardNotification.classList.add("opacity")
-//         }, 1500)
-//     })
-// })
+    document.querySelector(`.food-card__content[data-id="${id}"]`).querySelector(".food-card__btn").disabled = false
+}
+
+dropdownCards.addEventListener("click", (event) => {
+    if (event.target.closest(".dropdown-content__trash-icon")) {
+        deleteCards(event.target.closest(".food-card__content"))
+    }
+})
