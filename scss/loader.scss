@@ -1,16 +1,16 @@
 
 .loader-wrapper {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100vh;
+  height: calc(100vh - 89px);
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1001;
   background-color: white;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .loader {
