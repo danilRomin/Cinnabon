@@ -56,9 +56,10 @@ li {
   transform: translateY(25px);
 }
 
-.section-hide_left {
-  opacity: 0;
-  transform: translateX(-75px);
+.section-show_left {
+  transition: 0.7s;
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 
 .modal-profile-overlay {
@@ -484,6 +485,9 @@ a {
   flex-direction: column;
   bottom: 10vh;
   max-width: 80vw;
+  opacity: 0;
+  transition: 0.7s;
+  transform: translateX(-75px);
 }
 @media (max-width: 580px) {
   .banner__text {

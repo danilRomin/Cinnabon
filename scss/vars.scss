@@ -59,7 +59,8 @@ $desktop-s: 980px;
   transform: translateY(25px);
 }
 
-.section-hide_left {
-  opacity: 0;
-  transform: translateX(-75px);
+.section-show_left {
+  transition: .7s;
+  opacity: 1!important;
+  transform: translateX(0)!important;
 }

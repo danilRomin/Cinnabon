@@ -297,6 +297,9 @@ a {
   flex-direction: column;
   bottom: 10vh;
   max-width: 80vw;
+  opacity: 0;
+  transition: .7s;
+  transform: translateX(-75px);
 
   @media (max-width: $mobile-m) {
     margin-bottom: 5px;
