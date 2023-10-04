@@ -250,15 +250,7 @@ window.addEventListener("scroll", function () {
 
 // Анимация при появлении
 
-// let prevScrollPos = window.scrollY || document.documentElement.scrollTop;
-// window.addEventListener('scroll', function() {
-//     let currentScrollPos = window.scrollY || document.documentElement.scrollTop;
-//     if (prevScrollPos < currentScrollPos) {
-//
-//         console.log('Скролл вниз');
-//     }
-//     prevScrollPos = currentScrollPos;
-// });
+
 
 const showElement = document.querySelectorAll(".show-element")
 

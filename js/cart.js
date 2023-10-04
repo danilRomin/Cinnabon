@@ -10,6 +10,9 @@ const toCardNotification = document.querySelector(".cart-notification")
 // Открытие выпадающего списка
 cart.addEventListener("click", () => {
     dropdownContent.classList.toggle("show_flex")
+    // body.style.paddingRight = `${getWidth()}px`
+    // body.classList.toggle("body-overflow")
+
 })
 dropdownContent.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -147,5 +150,8 @@ function deleteCards(cardParent) {
 dropdownCards.addEventListener("click", (event) => {
     if (event.target.closest(".dropdown-content__trash-icon")) {
         deleteCards(event.target.closest(".dropdown-content-card__wrapper"))
+    }
+    if (event.target.closest()) {
+
     }
 })
