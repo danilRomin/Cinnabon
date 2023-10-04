@@ -7,12 +7,23 @@ let fullPrice = document.querySelector(".full-price")
 let price = 0
 const toCardNotification = document.querySelector(".cart-notification")
 
+window.addEventListener("scroll", () => {
+    dropdownContent.classList.remove("show_flex")
+})
+
+function disableScrollCart() {
+    if (dropdownContent.classList.contains("show_flex")) {
+        body.style.paddingRight = `${getWidth()}px`
+        body.classList.toggle("body-overflow")
+    }
+}
+
 // Открытие выпадающего списка
 cart.addEventListener("click", () => {
-    dropdownContent.classList.toggle("show_flex")
-    // body.style.paddingRight = `${getWidth()}px`
-    // body.classList.toggle("body-overflow")
-
+    let length = dropdownCards.children.length;
+    if (length > 0) {
+        dropdownContent.classList.toggle("show_flex")
+    }
 })
 dropdownContent.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -22,7 +33,6 @@ dropdownContent.addEventListener("click", (event) => {
 window.addEventListener("click", (event) => {
     if (!event.target.closest(".cart") && dropdownContent.classList.contains("show_flex")) {
         dropdownContent.classList.remove("show_flex")
-
     }
 })
 
@@ -57,16 +67,16 @@ function printFullPrice() {
 }
 
 // Число товаров в корзине
-const printQuantity = () => {
+function printQuantity() {
     let length = dropdownCards.children.length;
     cartQuantity.innerHTML = length
     if (length > 0) {
         cart.classList.add("active")
     } else {
         cart.classList.remove("active")
-        // cartQuantity.innerText = 0
     }
 }
+
 
 function generateCard(img, title, price, id) {
     return `
@@ -109,7 +119,6 @@ foodCardBtn.forEach((item) => {
         let id = parent.dataset.id
         let img = parent.querySelector(".food-card__img-wrapper img").getAttribute("src")
         let title = parent.querySelector(".food-card__name").textContent
-        // let priceString = parent.querySelector(".food-card__cost").textContent
         let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector(".food-card__cost").textContent))
         //     Сумма
         plusFullPrice(priceNumber)
@@ -144,14 +153,15 @@ function deleteCards(cardParent) {
     printFullPrice()
     cardParent.remove()
     printQuantity()
+
+    if (dropdownCards.children.length < 1) {
+        dropdownContent.classList.remove("show_flex")
+    }
 }
 
 // Удаление карточки при клике на мусорку
 dropdownCards.addEventListener("click", (event) => {
     if (event.target.closest(".dropdown-content__trash-icon")) {
         deleteCards(event.target.closest(".dropdown-content-card__wrapper"))
-    }
-    if (event.target.closest()) {
-
     }
 })

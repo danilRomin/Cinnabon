@@ -160,7 +160,7 @@ li {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: calc(100vh - 89px);
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -1005,7 +1005,7 @@ input::-webkit-inner-spin-button {
     min-width: unset;
     position: fixed;
     right: 50%;
-    transform: translateX(50%);
+    transform: translateX(50%) !important;
   }
 }
 
@@ -1032,6 +1032,7 @@ input::-webkit-inner-spin-button {
   min-height: 120px;
   transition: 0.3s;
   width: 100%;
+  border-bottom: 1px solid #d8d8d8;
 }
 .dropdown-content__card:not(:last-child) {
   border-bottom: 1px solid #d8d8d8;
@@ -1126,7 +1127,6 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  border-top: 1px solid #d8d8d8;
 }
 
 .dropdown-content__result {
