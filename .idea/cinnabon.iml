@@ -8,8 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="landingPage" />
-    <orderEntry type="module" module-name="gorod" />
     <orderEntry type="library" name="swiper" level="application" />
     <orderEntry type="library" name="simplebar" level="application" />
   </component>

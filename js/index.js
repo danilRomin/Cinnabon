@@ -13,23 +13,6 @@ function getWidth() {
     return Number(window.innerWidth - docWidth)
 }
 
-// Скролл по нажатию на ссылки
-document.querySelectorAll(".nav__links").forEach((item) => {
-    item.addEventListener("click", (event) => {
-        event.preventDefault()
-        const navLinks = event.target
-        const gotoBlock = document.querySelector(navLinks.dataset.goto)
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector(".header-wrapper").offsetHeight
-        burgerMenu.classList.remove("active")
-        menuBtn.classList.remove("active")
-        body.classList.remove("body-overflow")
-        body.style.paddingRight = ""
-        window.scrollTo({
-            top: gotoBlockValue, behavior: "smooth"
-        })
-    })
-})
-
 const iconProfile = document.querySelector(".icon-profile")
 const menuBtn = document.querySelector('.menu-btn')
 const burgerMenu = document.querySelector('.burger-menu')

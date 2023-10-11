@@ -11,6 +11,11 @@
   font-family: "Gotham Pro", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 89px;
+}
+
 .arrow-down {
   transform: translateY(20%);
 }

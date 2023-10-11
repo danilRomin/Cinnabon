@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cinnabon.iml" filepath="$PROJECT_DIR$/.idea/cinnabon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../www/Basics of JS/gorod/.idea/gorod.iml" filepath="$PROJECT_DIR$/../../www/Basics of JS/gorod/.idea/gorod.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../www/landingPage/.idea/landingPage.iml" filepath="$PROJECT_DIR$/../../www/landingPage/.idea/landingPage.iml" />
     </modules>
   </component>
 </project>
