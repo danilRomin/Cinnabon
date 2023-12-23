@@ -443,15 +443,9 @@ sup {
   transition: .7s;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));;
   letter-spacing: 1px;
   align-items: stretch;
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: $mobile) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .food-card {

@@ -128,7 +128,6 @@ tabHead.addEventListener("click", (event) => {
     event.target.classList.add("active-tab")
     if (isMobile) {
         event.target.classList.add("tabs-order")
-
     }
     let tabName = event.target.dataset.tab
 
