@@ -20,10 +20,10 @@ const nav = document.querySelector(".nav")
 const logoImg = document.querySelector(".logo__img")
 
 const removeBurgerMenu = () => {
-    menuBtn.classList.toggle("active")
-    burgerMenu.classList.toggle("active")
-    body.style.paddingRight = `${getWidth()}px`
-    body.classList.toggle("body-overflow")
+    burgerMenu.classList.remove("active")
+    menuBtn.classList.remove("active")
+    body.classList.remove("body-overflow")
+    body.style.paddingRight = ""
 }
 
 // Изменение шапки при изменении ширины экрана
@@ -47,7 +47,10 @@ window.addEventListener("resize", checkScreenWidth)
 
 // Клик по бургеру, устранение скачка контента
 menuBtn.addEventListener("click", () => {
-    removeBurgerMenu()
+    menuBtn.classList.toggle("active")
+    burgerMenu.classList.toggle("active")
+    body.style.paddingRight = `${getWidth()}px`
+    body.classList.toggle("body-overflow")
 })
 
 // Клик по ссылкам внутри бургер-меню
