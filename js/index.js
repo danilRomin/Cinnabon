@@ -19,6 +19,13 @@ const burgerMenu = document.querySelector('.burger-menu')
 const nav = document.querySelector(".nav")
 const logoImg = document.querySelector(".logo__img")
 
+const removeBurgerMenu = () => {
+    menuBtn.classList.toggle("active")
+    burgerMenu.classList.toggle("active")
+    body.style.paddingRight = `${getWidth()}px`
+    body.classList.toggle("body-overflow")
+}
+
 // Изменение шапки при изменении ширины экрана
 function checkScreenWidth() {
     const isMobile = window.innerWidth <= 980
@@ -28,10 +35,7 @@ function checkScreenWidth() {
     iconProfile.classList.toggle("hide", isMobile)
 
     if (!isMobile) {
-        burgerMenu.classList.remove("active")
-        menuBtn.classList.remove("active")
-        body.classList.remove("body-overflow")
-        body.style.paddingRight = ""
+        removeBurgerMenu()
     }
 }
 
@@ -43,11 +47,12 @@ window.addEventListener("resize", checkScreenWidth)
 
 // Клик по бургеру, устранение скачка контента
 menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active")
-    console.log(menuBtn.parentNode)
-    burgerMenu.classList.toggle("active")
-    body.style.paddingRight = `${getWidth()}px`
-    body.classList.toggle("body-overflow")
+    removeBurgerMenu()
+})
+
+// Клик по ссылкам внутри бургер-меню
+burgerMenu.addEventListener("click", (event) => {
+    event.target.classList.contains("nav__links") ? removeBurgerMenu() : undefined
 })
 
 //Слайды с едой
@@ -248,22 +253,3 @@ showElement.forEach(item => {
     showObserver.observe(item)
     item.classList.add("section-hide_top")
 })
-
-// Анимация для заголовка в первом блоке
-// const showElementLeft = document.querySelectorAll(".show-element_left")
-//
-// function showElementFunctionLeft(entries) {
-//     entries.forEach(item => {
-//         if (item.isIntersecting) {
-//             item.target.classList.remove("section-hide_left")
-//             //  при скролле убирается hide
-//         }
-//     })
-// }
-//
-// const showObserverLeft = new IntersectionObserver(showElementFunctionLeft, {threshold: 0.1})
-//
-// showElementLeft.forEach(item => {
-//     showObserverLeft.observe(item)
-//     item.classList.add("section-hide_left")
-// })
